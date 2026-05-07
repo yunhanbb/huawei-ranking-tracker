@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Competition Ranking Tracker</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f4ee;
+        --panel: #ffffff;
+        --text: #1f2933;
+        --muted: #607080;
+        --line: #dde3ea;
+        --accent: #cc2f38;
+        --accent-2: #096b72;
+        --good: #168a4a;
+        --warn: #a35d00;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0;
+      }
+
+      header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(30px, 5vw, 56px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .subtle {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .status {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--good);
+        box-shadow: 0 0 0 4px rgba(22, 138, 74, 0.14);
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .metric,
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 1px 2px rgba(31, 41, 51, 0.05);
+      }
+
+      .metric {
+        padding: 16px;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: clamp(24px, 4vw, 40px);
+        line-height: 1;
+      }
+
+      .panel {
+        overflow: hidden;
+      }
+
+      .panel-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-head h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      a {
+        color: var(--accent-2);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      tr.target-row {
+        background: #fff3f2;
+      }
+
+      .rank {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .change {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .up {
+        color: var(--good);
+      }
+
+      .down {
+        color: var(--warn);
+      }
+
+      .empty,
+      .error {
+        padding: 20px;
+      }
+
+      .error {
+        color: #8a1f11;
+      }
+
+      canvas {
+        width: 100%;
+        height: 220px;
+        display: block;
+      }
+
+      @media (max-width: 760px) {
+        header {
+          display: block;
+        }
+
+        .status {
+          margin-top: 14px;
+        }
+
+        .summary {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        th:nth-child(4),
+        td:nth-child(4),
+        th:nth-child(5),
+        td:nth-child(5) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Competition Ranking Tracker</h1>
+          <p class="subtle" id="subtitle">Loading ranking data...</p>
+        </div>
+        <div class="status"><span class="dot"></span><span id="generated">Waiting</span></div>
+      </header>
+
+      <section class="summary" aria-label="ranking summary">
+        <div class="metric"><span>Target Rank</span><strong id="rank">-</strong></div>
+        <div class="metric"><span>Score</span><strong id="score">-</strong></div>
+        <div class="metric"><span>Total Teams</span><strong id="total">-</strong></div>
+        <div class="metric"><span>Stage</span><strong id="stage">-</strong></div>
+      </section>
+
+      <section class="panel" style="margin-bottom: 16px">
+        <div class="panel-head">
+          <h2>Rank History</h2>
+          <span class="subtle" id="history-count">-</span>
+        </div>
+        <canvas id="chart" width="1000" height="220"></canvas>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Top Ranking</h2>
+          <a id="source-link" href="#" target="_blank" rel="noreferrer">Source</a>
+        </div>
+        <div id="table-wrap"></div>
+      </section>
+    </main>
+
+    <script>
+      const fmt = new Intl.NumberFormat("zh-CN");
+      const timeFmt = new Intl.DateTimeFormat("zh-CN", {
+        dateStyle: "medium",
+        timeStyle: "medium",
+      });
+
+      function text(id, value) {
+        document.getElementById(id).textContent = value ?? "-";
+      }
+
+      function formatTime(value) {
+        if (!value) return "-";
+        const date = new Date(value.includes("T") ? value : value.replace(" ", "T") + "+08:00");
+        return Number.isNaN(date.valueOf()) ? value : timeFmt.format(date);
+      }
+
+      function changeLabel(row) {
+        const value = row.ranking_change;
+        const amount = row.ranking_change_num || 0;
+        if (value === "up") return `<span class="change up">Up ${amount}</span>`;
+        if (value === "down") return `<span class="change down">Down ${amount}</span>`;
+        return `<span class="change">Unchanged</span>`;
+      }
+
+      function renderTable(result) {
+        const rows = result.top || [];
+        if (!rows.length) {
+          document.getElementById("table-wrap").innerHTML = '<div class="empty">No ranking rows found.</div>';
+          return;
+        }
+        const targetTeam = String(result.team || "").toLowerCase();
+        document.getElementById("table-wrap").innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Score</th>
+                <th>Submit Time</th>
+                <th>Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows
+                .map((row) => {
+                  const isTarget =
+                    String(row.team_name || "").toLowerCase() === targetTeam ||
+                    String(row.team_id || "").toLowerCase() === targetTeam;
+                  return `
+                    <tr class="${isTarget ? "target-row" : ""}">
+                      <td class="rank">${row.ranking ?? "-"}</td>
+                      <td>${row.team_name ?? "-"}</td>
+                      <td>${row.score == null ? "-" : fmt.format(row.score)}</td>
+                      <td>${formatTime(row.submit_time)}</td>
+                      <td>${changeLabel(row)}</td>
+                    </tr>
+                  `;
+                })
+                .join("")}
+            </tbody>
+          </table>
+        `;
+      }
+
+      function drawHistory(items) {
+        const canvas = document.getElementById("chart");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (!items.length) {
+          ctx.fillStyle = "#607080";
+          ctx.font = "18px sans-serif";
+          ctx.fillText("No history yet", 24, 44);
+          return;
+        }
+
+        const points = items.filter((item) => Number.isFinite(Number(item.ranking)));
+        if (!points.length) return;
+        const ranks = points.map((item) => Number(item.ranking));
+        const minRank = Math.min(...ranks);
+        const maxRank = Math.max(...ranks);
+        const pad = 28;
+        const width = canvas.width - pad * 2;
+        const height = canvas.height - pad * 2;
+        const span = Math.max(1, maxRank - minRank);
+
+        ctx.strokeStyle = "#dde3ea";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(pad, pad);
+        ctx.lineTo(pad, canvas.height - pad);
+        ctx.lineTo(canvas.width - pad, canvas.height - pad);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#cc2f38";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        points.forEach((point, index) => {
+          const x = pad + (points.length === 1 ? width : (index / (points.length - 1)) * width);
+          const y = pad + ((Number(point.ranking) - minRank) / span) * height;
+          if (index === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        const latest = points[points.length - 1];
+        const x = pad + width;
+        const y = pad + ((Number(latest.ranking) - minRank) / span) * height;
+        ctx.fillStyle = "#cc2f38";
+        ctx.beginPath();
+        ctx.arc(x, y, 6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      async function main() {
+        const [current, history] = await Promise.all([
+          fetch("./data/rankings.json").then((res) => res.json()),
+          fetch("./data/history.json").then((res) => res.json()).catch(() => ({ items: [] })),
+        ]);
+
+        if (current.errors && current.errors.length) {
+          document.querySelector(".dot").style.background = "#a35d00";
+        }
+
+        const result = current.targets?.[0];
+        if (!result) {
+          document.getElementById("table-wrap").innerHTML =
+            '<div class="error">No target data generated.</div>';
+          return;
+        }
+
+        const target = result.target || {};
+        text("subtitle", `${result.competition_title || result.name} · ${result.team}`);
+        text("generated", `Updated ${formatTime(current.generated_at)}`);
+        text("rank", result.found ? `#${target.ranking}` : "Not found");
+        text("score", target.score == null ? "-" : fmt.format(target.score));
+        text("total", result.total == null ? "-" : fmt.format(result.total));
+        text("stage", result.stage_name || "-");
+        document.getElementById("source-link").href = result.competition_url;
+
+        const items = (history.items || []).filter(
+          (item) => item.competition_url_id === result.competition_url_id && item.team === result.team
+        );
+        text("history-count", `${items.length} snapshots`);
+        renderTable(result);
+        drawHistory(items);
+      }
+
+      main().catch((error) => {
+        document.getElementById("table-wrap").innerHTML =
+          `<div class="error">${error.message}</div>`;
+      });
+    </script>
+  </body>
+</html>

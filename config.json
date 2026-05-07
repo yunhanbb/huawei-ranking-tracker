@@ -1,0 +1,12 @@
+{
+  "targets": [
+    {
+      "name": "Huawei Algorithm Challenge 37",
+      "competition_url": "https://developer.huaweicloud.cn/competition/information/1300000256/ranking",
+      "competition_url_id": "1300000256",
+      "team": "hid_rl3ei4awlp8cx6k"
+    }
+  ],
+  "page_size": 100,
+  "history_limit": 300
+}
