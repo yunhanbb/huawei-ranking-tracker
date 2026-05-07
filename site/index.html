@@ -334,6 +334,108 @@
         font-size: 12px;
       }
 
+      .ranking-bars {
+        padding: 18px 18px 20px;
+      }
+
+      .bar-scale {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .bar-chart {
+        display: grid;
+        grid-template-columns: repeat(var(--bar-count), minmax(14px, 1fr));
+        align-items: end;
+        gap: 2px;
+        height: 230px;
+        padding: 12px 0 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line-strong);
+        background: var(--surface-2);
+      }
+
+      .bar-item {
+        position: relative;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        height: 100%;
+        min-width: 0;
+      }
+
+      .bar {
+        width: 100%;
+        min-height: 18px;
+        height: var(--height);
+        border-radius: 4px 4px 0 0;
+        background: #9fb6c0;
+        border: 1px solid rgba(8, 116, 127, 0.2);
+        border-bottom: 0;
+      }
+
+      .bar-item.target .bar {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .bar-item.target::before {
+        content: attr(data-score);
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        padding: 3px 7px;
+        border-radius: 8px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 850;
+        white-space: nowrap;
+      }
+
+      .bar-item.target::after {
+        content: "";
+        position: absolute;
+        inset: -8px -2px 0;
+        border: 1px solid rgba(197, 51, 62, 0.35);
+        border-bottom: 0;
+        border-radius: 6px 6px 0 0;
+        pointer-events: none;
+      }
+
+      .rank-axis {
+        display: grid;
+        grid-template-columns: repeat(var(--bar-count), minmax(14px, 1fr));
+        gap: 2px;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .rank-axis span {
+        min-width: 0;
+      }
+
+      .rank-axis .target {
+        color: var(--accent);
+      }
+
+      .bar-legend {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
       .table-scroll {
         width: 100%;
         overflow-x: auto;
@@ -369,32 +471,6 @@
         border-bottom: 0;
       }
 
-      .target-row {
-        background: var(--red-soft);
-      }
-
-      .target-row:hover {
-        background: #ffe9e9;
-      }
-
-      .rank-cell {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 38px;
-        height: 30px;
-        padding: 0 9px;
-        border-radius: 8px;
-        background: var(--surface-2);
-        color: var(--ink);
-        font-weight: 850;
-      }
-
-      .target-row .rank-cell {
-        background: var(--accent);
-        color: #fff;
-      }
-
       .team-name {
         color: var(--ink);
         font-weight: 750;
@@ -412,20 +488,6 @@
       .score-fail {
         color: #9b1c1f;
         font-weight: 800;
-      }
-
-      .change {
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .up {
-        color: var(--green);
-      }
-
-      .down {
-        color: var(--amber);
       }
 
       .feedback {
@@ -548,6 +610,18 @@
 
         canvas {
           height: 250px;
+        }
+
+        .ranking-bars {
+          padding: 16px 12px 18px;
+        }
+
+        .bar-chart {
+          height: 190px;
+        }
+
+        .bar-item.target::before {
+          font-size: 10px;
         }
       }
     </style>
@@ -696,58 +770,67 @@
         return Number.isFinite(score) ? score : null;
       }
 
-      function changeLabel(row) {
-        const value = row.ranking_change;
-        const amount = row.ranking_change_num || 0;
-        if (value === "up") return `<span class="change up">Up ${amount}</span>`;
-        if (value === "down") return `<span class="change down">Down ${amount}</span>`;
-        return `<span class="change">Unchanged</span>`;
-      }
-
       function feedbackLabel(value) {
         const ok = String(value || "").toLowerCase() === "success";
         return `<span class="feedback ${ok ? "" : "fail"}">${esc(value || "-")}</span>`;
       }
 
-      function renderTable(result) {
+      function renderRankingBars(result) {
         const rows = result.top || [];
         if (!rows.length) {
           document.getElementById("table-wrap").innerHTML = '<div class="empty">No ranking rows found.</div>';
           return;
         }
         const targetTeam = String(result.team || "").toLowerCase();
-        text("ranking-summary", `${rows.length} shown · ${fmt.format(result.total || rows.length)} total`);
+        const scores = rows.map((row) => Number(row.score)).filter((score) => Number.isFinite(score));
+        const minScore = Math.min(...scores);
+        const maxScore = Math.max(...scores);
+        const span = Math.max(1, maxScore - minScore);
+        const targetRow = rows.find(
+          (row) =>
+            String(row.team_name || "").toLowerCase() === targetTeam ||
+            String(row.team_id || "").toLowerCase() === targetTeam
+        );
+        text(
+          "ranking-summary",
+          `${rows.length} ranks · score range ${fmt.format(minScore)}-${fmt.format(maxScore)}`
+        );
         document.getElementById("table-wrap").innerHTML = `
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Team</th>
-                  <th>Score</th>
-                  <th>Submit Time</th>
-                  <th>Change</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${rows
-                  .map((row) => {
-                    const isTarget =
-                      String(row.team_name || "").toLowerCase() === targetTeam ||
-                      String(row.team_id || "").toLowerCase() === targetTeam;
-                    return `
-                      <tr class="${isTarget ? "target-row" : ""}">
-                        <td><span class="rank-cell">${esc(row.ranking)}</span></td>
-                        <td><span class="team-name">${esc(row.team_name)}</span></td>
-                        <td class="mono">${row.score == null ? "-" : fmt.format(row.score)}</td>
-                        <td>${formatTime(row.submit_time)}</td>
-                        <td>${changeLabel(row)}</td>
-                      </tr>
-                    `;
-                  })
-                  .join("")}
-              </tbody>
-            </table>
+          <div class="ranking-bars" style="--bar-count: ${rows.length}">
+            <div class="bar-scale">
+              <span>${fmt.format(maxScore)}</span>
+              <span>${fmt.format(minScore)}</span>
+            </div>
+            <div class="bar-chart" aria-label="Top ranking score bar chart">
+              ${rows
+                .map((row) => {
+                  const score = Number(row.score);
+                  const isTarget =
+                    String(row.team_name || "").toLowerCase() === targetTeam ||
+                    String(row.team_id || "").toLowerCase() === targetTeam;
+                  const percent = Number.isFinite(score) ? 18 + ((score - minScore) / span) * 82 : 18;
+                  return `
+                    <div class="bar-item ${isTarget ? "target" : ""}" data-score="${fmt.format(score)}" title="Rank ${esc(row.ranking)} · ${fmt.format(score)}">
+                      <div class="bar" style="--height: ${percent.toFixed(2)}%"></div>
+                    </div>
+                  `;
+                })
+                .join("")}
+            </div>
+            <div class="rank-axis" aria-label="rank axis">
+              ${rows
+                .map((row) => {
+                  const isTarget =
+                    String(row.team_name || "").toLowerCase() === targetTeam ||
+                    String(row.team_id || "").toLowerCase() === targetTeam;
+                  return `<span class="${isTarget ? "target" : ""}">${esc(row.ranking)}</span>`;
+                })
+                .join("")}
+            </div>
+            <div class="bar-legend">
+              <span>Rank 1 to ${esc(rows[rows.length - 1].ranking)}</span>
+              <span>${targetRow ? `Target #${esc(targetRow.ranking)} · ${fmt.format(targetRow.score)}` : "Target not in top range"}</span>
+            </div>
           </div>
         `;
       }
@@ -987,7 +1070,7 @@
         }
 
         updateMetrics(current, submissions);
-        renderTable(result);
+        renderRankingBars(result);
         renderSubmissions(submissions);
         drawScoreHistory(submissions?.items || []);
         window.addEventListener("resize", () => drawScoreHistory(latestScoreItems));
