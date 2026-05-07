@@ -236,8 +236,8 @@
 
       <section class="panel" style="margin-bottom: 16px">
         <div class="panel-head">
-          <h2>Rank History</h2>
-          <span class="subtle" id="history-count">-</span>
+          <h2>Score History</h2>
+          <span class="subtle" id="score-history-count">-</span>
         </div>
         <canvas id="chart" width="1000" height="220"></canvas>
       </section>
@@ -375,26 +375,29 @@
         `;
       }
 
-      function drawHistory(items) {
+      function drawScoreHistory(items) {
         const canvas = document.getElementById("chart");
         const ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        if (!items.length) {
+        const points = (items || [])
+          .filter((item) => Number(item.score) >= 0)
+          .slice()
+          .reverse();
+
+        if (!points.length) {
           ctx.fillStyle = "#607080";
           ctx.font = "18px sans-serif";
-          ctx.fillText("No history yet", 24, 44);
+          ctx.fillText("No score history yet", 24, 44);
           return;
         }
 
-        const points = items.filter((item) => Number.isFinite(Number(item.ranking)));
-        if (!points.length) return;
-        const ranks = points.map((item) => Number(item.ranking));
-        const minRank = Math.min(...ranks);
-        const maxRank = Math.max(...ranks);
+        const scores = points.map((item) => Number(item.score));
+        const minScore = Math.min(...scores);
+        const maxScore = Math.max(...scores);
         const pad = 28;
         const width = canvas.width - pad * 2;
         const height = canvas.height - pad * 2;
-        const span = Math.max(1, maxRank - minRank);
+        const span = Math.max(1, maxScore - minScore);
 
         ctx.strokeStyle = "#dde3ea";
         ctx.lineWidth = 1;
@@ -409,7 +412,7 @@
         ctx.beginPath();
         points.forEach((point, index) => {
           const x = pad + (points.length === 1 ? width : (index / (points.length - 1)) * width);
-          const y = pad + ((Number(point.ranking) - minRank) / span) * height;
+          const y = pad + (1 - (Number(point.score) - minScore) / span) * height;
           if (index === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         });
@@ -417,17 +420,21 @@
 
         const latest = points[points.length - 1];
         const x = pad + width;
-        const y = pad + ((Number(latest.ranking) - minRank) / span) * height;
+        const y = pad + (1 - (Number(latest.score) - minScore) / span) * height;
         ctx.fillStyle = "#cc2f38";
         ctx.beginPath();
         ctx.arc(x, y, 6, 0, Math.PI * 2);
         ctx.fill();
+
+        ctx.fillStyle = "#607080";
+        ctx.font = "14px sans-serif";
+        ctx.fillText(fmt.format(maxScore), pad + 6, pad + 16);
+        ctx.fillText(fmt.format(minScore), pad + 6, canvas.height - pad - 8);
       }
 
       async function main() {
-        const [current, history, submissions] = await Promise.all([
+        const [current, submissions] = await Promise.all([
           fetch("./data/rankings.json").then((res) => res.json()),
-          fetch("./data/history.json").then((res) => res.json()).catch(() => ({ items: [] })),
           fetch("./data/submission_history.json").then((res) => res.json()).catch(() => null),
         ]);
 
@@ -451,12 +458,11 @@
         text("stage", result.stage_name || "-");
         document.getElementById("source-link").href = result.competition_url;
 
-        const items = (history.items || []).filter(
-          (item) => item.competition_url_id === result.competition_url_id && item.team === result.team
-        );
-        text("history-count", `${items.length} snapshots`);
+        const scoreItems = submissions?.items || [];
+        const scoredItems = scoreItems.filter((item) => Number(item.score) >= 0);
+        text("score-history-count", `${scoredItems.length} scored submissions`);
         renderTable(result);
-        drawHistory(items);
+        drawScoreHistory(scoreItems);
         renderSubmissions(submissions);
       }
 
