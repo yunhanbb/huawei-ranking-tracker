@@ -157,6 +157,16 @@
         color: var(--accent);
       }
 
+      .score-ok {
+        color: var(--good);
+        font-weight: 700;
+      }
+
+      .score-fail {
+        color: #8a1f11;
+        font-weight: 700;
+      }
+
       .change {
         color: var(--muted);
         font-size: 13px;
@@ -239,6 +249,14 @@
         </div>
         <div id="table-wrap"></div>
       </section>
+
+      <section class="panel" style="margin-top: 16px">
+        <div class="panel-head">
+          <h2>Submission History</h2>
+          <span class="subtle" id="submission-summary">-</span>
+        </div>
+        <div id="submission-wrap"></div>
+      </section>
     </main>
 
     <script>
@@ -306,6 +324,57 @@
         `;
       }
 
+      function renderSubmissions(data) {
+        const wrap = document.getElementById("submission-wrap");
+        if (!data || !Array.isArray(data.items) || !data.items.length) {
+          wrap.innerHTML = '<div class="empty">No submission history snapshot found.</div>';
+          text("submission-summary", "0 snapshots");
+          return;
+        }
+
+        const valid = data.items.filter((item) => Number(item.score) >= 0);
+        const failed = data.items.length - valid.length;
+        const best = valid.reduce((max, item) => {
+          if (!max) return item;
+          return Number(item.score) > Number(max.score) ? item : max;
+        }, null);
+
+        text(
+          "submission-summary",
+          `${data.items.length} submissions · ${valid.length} scored · ${failed} failed · best ${best ? fmt.format(best.score) : "-"}`
+        );
+
+        wrap.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Submit Time</th>
+                <th>Work</th>
+                <th>Score</th>
+                <th>Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${data.items
+                .map((item) => {
+                  const ok = Number(item.score) >= 0;
+                  return `
+                    <tr>
+                      <td>${item.page ?? "-"}</td>
+                      <td>${formatTime(item.submit_time)}</td>
+                      <td>${item.work_name ?? "-"}</td>
+                      <td class="${ok ? "score-ok" : "score-fail"}">${item.score ?? "-"}</td>
+                      <td>${item.feedback ?? "-"}</td>
+                    </tr>
+                  `;
+                })
+                .join("")}
+            </tbody>
+          </table>
+        `;
+      }
+
       function drawHistory(items) {
         const canvas = document.getElementById("chart");
         const ctx = canvas.getContext("2d");
@@ -356,9 +425,10 @@
       }
 
       async function main() {
-        const [current, history] = await Promise.all([
+        const [current, history, submissions] = await Promise.all([
           fetch("./data/rankings.json").then((res) => res.json()),
           fetch("./data/history.json").then((res) => res.json()).catch(() => ({ items: [] })),
+          fetch("./data/submission_history.json").then((res) => res.json()).catch(() => null),
         ]);
 
         if (current.errors && current.errors.length) {
@@ -387,6 +457,7 @@
         text("history-count", `${items.length} snapshots`);
         renderTable(result);
         drawHistory(items);
+        renderSubmissions(submissions);
       }
 
       main().catch((error) => {
