@@ -4,22 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Competition Ranking Tracker</title>
+    <link rel="icon" href="data:," />
     <style>
       :root {
         color-scheme: light;
-        --bg: #f7f4ee;
-        --panel: #ffffff;
-        --text: #1f2933;
-        --muted: #607080;
-        --line: #dde3ea;
-        --accent: #cc2f38;
-        --accent-2: #096b72;
-        --good: #168a4a;
-        --warn: #a35d00;
+        --bg: #f4f1ea;
+        --surface: #ffffff;
+        --surface-2: #faf8f3;
+        --ink: #17202a;
+        --text: #273340;
+        --muted: #687789;
+        --line: #dde4ea;
+        --line-strong: #cbd6df;
+        --accent: #c5333e;
+        --teal: #08747f;
+        --green: #167a4d;
+        --amber: #a35d00;
+        --red-soft: #fff1f1;
+        --teal-soft: #e8f6f6;
+        --shadow: 0 10px 24px rgba(28, 38, 48, 0.08);
       }
 
       * {
         box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
       }
 
       body {
@@ -27,52 +38,185 @@
         min-height: 100vh;
         background: var(--bg);
         color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
       }
 
-      main {
-        width: min(1120px, calc(100% - 32px));
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 32px));
         margin: 0 auto;
-        padding: 32px 0;
+        padding: 28px 0 44px;
       }
 
-      header {
+      .topbar {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
-        gap: 20px;
-        margin-bottom: 22px;
+        gap: 18px;
+        margin-bottom: 20px;
       }
 
-      h1 {
-        margin: 0 0 6px;
-        font-size: clamp(30px, 5vw, 56px);
-        line-height: 1;
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        background: var(--ink);
+        color: #fff;
+        font-weight: 850;
+        flex: 0 0 auto;
+      }
+
+      .brand-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1.2;
         letter-spacing: 0;
       }
 
-      .subtle {
+      .brand-meta {
+        margin: 2px 0 0;
         color: var(--muted);
-        margin: 0;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 auto;
       }
 
       .status {
-        display: flex;
-        gap: 10px;
+        display: inline-flex;
         align-items: center;
+        gap: 9px;
+        min-height: 36px;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.74);
         color: var(--muted);
+        font-size: 13px;
         white-space: nowrap;
       }
 
       .dot {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%;
-        background: var(--good);
-        box-shadow: 0 0 0 4px rgba(22, 138, 74, 0.14);
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(22, 122, 77, 0.13);
       }
 
-      .summary {
+      .button-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        padding: 0 13px;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        padding: 24px;
+        margin-bottom: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 36px;
+        line-height: 1.06;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        max-width: 760px;
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface-2);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .rank-tile {
+        min-width: 190px;
+        padding: 18px;
+        border: 1px solid #f0c3c7;
+        border-radius: 8px;
+        background: var(--red-soft);
+      }
+
+      .rank-label {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .rank-number {
+        margin-top: 8px;
+        color: var(--accent);
+        font-size: 52px;
+        line-height: 0.95;
+        font-weight: 900;
+      }
+
+      .rank-note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .metrics {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
@@ -81,61 +225,129 @@
 
       .metric,
       .panel {
-        background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 8px;
-        box-shadow: 0 1px 2px rgba(31, 41, 51, 0.05);
+        background: var(--surface);
+        box-shadow: 0 1px 2px rgba(28, 38, 48, 0.05);
       }
 
       .metric {
-        padding: 16px;
+        min-height: 112px;
+        padding: 15px;
       }
 
-      .metric span {
-        display: block;
+      .metric-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .metric-value {
+        margin-top: 12px;
+        color: var(--ink);
+        font-size: 28px;
+        line-height: 1;
+        font-weight: 880;
+        overflow-wrap: anywhere;
+      }
+
+      .metric-foot {
+        margin-top: 10px;
         color: var(--muted);
         font-size: 13px;
-        margin-bottom: 8px;
+        line-height: 1.35;
       }
 
-      .metric strong {
-        display: block;
-        font-size: clamp(24px, 4vw, 40px);
-        line-height: 1;
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 22px;
+        padding: 0 8px;
+        border-radius: 8px;
+        background: var(--teal-soft);
+        color: var(--teal);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+        gap: 16px;
+        align-items: start;
       }
 
       .panel {
         overflow: hidden;
       }
 
+      .panel + .panel {
+        margin-top: 16px;
+      }
+
       .panel-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
-        padding: 16px 18px;
+        gap: 14px;
+        min-height: 58px;
+        padding: 15px 18px;
         border-bottom: 1px solid var(--line);
+        background: var(--surface);
       }
 
       .panel-head h2 {
         margin: 0;
-        font-size: 18px;
+        color: var(--ink);
+        font-size: 17px;
+        line-height: 1.2;
+        letter-spacing: 0;
       }
 
-      a {
-        color: var(--accent-2);
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
+      .panel-kicker {
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .chart-wrap {
+        padding: 12px 14px 16px;
+      }
+
+      canvas {
+        width: 100%;
+        height: 292px;
+        display: block;
+      }
+
+      .chart-caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0 4px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
       }
 
       table {
         width: 100%;
+        min-width: 640px;
         border-collapse: collapse;
       }
 
       th,
       td {
-        padding: 12px 14px;
+        padding: 13px 16px;
         border-bottom: 1px solid var(--line);
         text-align: left;
         vertical-align: middle;
@@ -143,117 +355,299 @@
 
       th {
         color: var(--muted);
-        font-size: 13px;
-        font-weight: 650;
+        background: var(--surface-2);
+        font-size: 12px;
+        font-weight: 850;
+        text-transform: uppercase;
       }
 
-      tr.target-row {
-        background: #fff3f2;
+      tbody tr:hover {
+        background: #fbfcfd;
       }
 
-      .rank {
-        font-size: 22px;
-        font-weight: 800;
-        color: var(--accent);
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .target-row {
+        background: var(--red-soft);
+      }
+
+      .target-row:hover {
+        background: #ffe9e9;
+      }
+
+      .rank-cell {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 38px;
+        height: 30px;
+        padding: 0 9px;
+        border-radius: 8px;
+        background: var(--surface-2);
+        color: var(--ink);
+        font-weight: 850;
+      }
+
+      .target-row .rank-cell {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .team-name {
+        color: var(--ink);
+        font-weight: 750;
+      }
+
+      .mono {
+        font-variant-numeric: tabular-nums;
       }
 
       .score-ok {
-        color: var(--good);
-        font-weight: 700;
+        color: var(--green);
+        font-weight: 800;
       }
 
       .score-fail {
-        color: #8a1f11;
-        font-weight: 700;
+        color: #9b1c1f;
+        font-weight: 800;
       }
 
       .change {
         color: var(--muted);
         font-size: 13px;
+        font-weight: 700;
       }
 
       .up {
-        color: var(--good);
+        color: var(--green);
       }
 
       .down {
-        color: var(--warn);
+        color: var(--amber);
+      }
+
+      .feedback {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 0 9px;
+        border-radius: 8px;
+        background: #eef7f0;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .feedback.fail {
+        background: #fff1e5;
+        color: var(--amber);
+      }
+
+      .compact-list {
+        padding: 12px 16px 16px;
+      }
+
+      .list-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .list-row:last-child {
+        border-bottom: 0;
+      }
+
+      .list-title {
+        color: var(--ink);
+        font-weight: 800;
+      }
+
+      .list-meta {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .list-score {
+        text-align: right;
+        font-weight: 850;
       }
 
       .empty,
       .error {
         padding: 20px;
+        color: var(--muted);
       }
 
       .error {
-        color: #8a1f11;
+        color: #9b1c1f;
       }
 
-      canvas {
-        width: 100%;
-        height: 220px;
-        display: block;
-      }
-
-      @media (max-width: 760px) {
-        header {
-          display: block;
+      @media (max-width: 920px) {
+        .hero,
+        .layout {
+          grid-template-columns: 1fr;
         }
 
-        .status {
-          margin-top: 14px;
+        .rank-tile {
+          min-width: 0;
         }
 
-        .summary {
+        .metrics {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+      }
 
-        th:nth-child(4),
-        td:nth-child(4),
-        th:nth-child(5),
-        td:nth-child(5) {
-          display: none;
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 22px, 1180px);
+          padding-top: 18px;
+        }
+
+        .topbar,
+        .actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .actions,
+        .status,
+        .button-link {
+          width: 100%;
+        }
+
+        .button-link {
+          justify-content: center;
+        }
+
+        h1 {
+          font-size: 29px;
+        }
+
+        .hero {
+          padding: 18px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .metric {
+          min-height: 92px;
+        }
+
+        .panel-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        canvas {
+          height: 250px;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <div>
-          <h1>Competition Ranking Tracker</h1>
-          <p class="subtle" id="subtitle">Loading ranking data...</p>
+    <main class="page">
+      <nav class="topbar" aria-label="status and links">
+        <div class="brand">
+          <div class="mark">R</div>
+          <div>
+            <p class="brand-title">Competition Ranking Tracker</p>
+            <p class="brand-meta">Huawei Cloud competition monitor</p>
+          </div>
         </div>
-        <div class="status"><span class="dot"></span><span id="generated">Waiting</span></div>
-      </header>
+        <div class="actions">
+          <div class="status"><span class="dot"></span><span id="generated">Waiting</span></div>
+          <a class="button-link" id="source-link" href="#" target="_blank" rel="noreferrer">Open Source Page</a>
+        </div>
+      </nav>
 
-      <section class="summary" aria-label="ranking summary">
-        <div class="metric"><span>Target Rank</span><strong id="rank">-</strong></div>
-        <div class="metric"><span>Score</span><strong id="score">-</strong></div>
-        <div class="metric"><span>Total Teams</span><strong id="total">-</strong></div>
-        <div class="metric"><span>Stage</span><strong id="stage">-</strong></div>
+      <section class="hero" aria-label="tracked team">
+        <div>
+          <h1 id="team-title">Loading team...</h1>
+          <p class="subtitle" id="subtitle">Loading competition data...</p>
+          <div class="hero-tags">
+            <span class="tag" id="stage-tag">Stage -</span>
+            <span class="tag" id="total-tag">Teams -</span>
+            <span class="tag" id="refresh-tag">Ranking refresh -</span>
+          </div>
+        </div>
+        <div class="rank-tile">
+          <div class="rank-label">Current Rank</div>
+          <div class="rank-number" id="rank">-</div>
+          <div class="rank-note" id="rank-note">Waiting for ranking data</div>
+        </div>
       </section>
 
-      <section class="panel" style="margin-bottom: 16px">
-        <div class="panel-head">
-          <h2>Score History</h2>
-          <span class="subtle" id="score-history-count">-</span>
+      <section class="metrics" aria-label="summary metrics">
+        <div class="metric">
+          <div class="metric-label">Leaderboard Score <span class="chip">current</span></div>
+          <div class="metric-value mono" id="score">-</div>
+          <div class="metric-foot" id="score-foot">Latest published ranking score</div>
         </div>
-        <canvas id="chart" width="1000" height="220"></canvas>
+        <div class="metric">
+          <div class="metric-label">Best Submission <span class="chip">history</span></div>
+          <div class="metric-value mono" id="best-score">-</div>
+          <div class="metric-foot" id="best-score-foot">From submission history</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Latest Submission <span class="chip">snapshot</span></div>
+          <div class="metric-value mono" id="latest-score">-</div>
+          <div class="metric-foot" id="latest-score-foot">Most recent submitted result</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Scored Rate <span class="chip">quality</span></div>
+          <div class="metric-value mono" id="scored-rate">-</div>
+          <div class="metric-foot" id="scored-rate-foot">Successful scoring ratio</div>
+        </div>
+      </section>
+
+      <section class="layout">
+        <div>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Score History</h2>
+              <span class="panel-kicker" id="score-history-count">-</span>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="chart"></canvas>
+              <div class="chart-caption">
+                <span id="chart-start">-</span>
+                <span id="chart-end">-</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Top Ranking</h2>
+              <span class="panel-kicker" id="ranking-summary">-</span>
+            </div>
+            <div id="table-wrap"></div>
+          </section>
+        </div>
+
+        <aside>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Best Runs</h2>
+              <span class="panel-kicker" id="best-runs-count">-</span>
+            </div>
+            <div class="compact-list" id="best-runs"></div>
+          </section>
+        </aside>
       </section>
 
       <section class="panel">
         <div class="panel-head">
-          <h2>Top Ranking</h2>
-          <a id="source-link" href="#" target="_blank" rel="noreferrer">Source</a>
-        </div>
-        <div id="table-wrap"></div>
-      </section>
-
-      <section class="panel" style="margin-top: 16px">
-        <div class="panel-head">
           <h2>Submission History</h2>
-          <span class="subtle" id="submission-summary">-</span>
+          <span class="panel-kicker" id="submission-summary">-</span>
         </div>
         <div id="submission-wrap"></div>
       </section>
@@ -261,19 +655,45 @@
 
     <script>
       const fmt = new Intl.NumberFormat("zh-CN");
+      const percentFmt = new Intl.NumberFormat("zh-CN", {
+        maximumFractionDigits: 1,
+        style: "percent",
+      });
       const timeFmt = new Intl.DateTimeFormat("zh-CN", {
         dateStyle: "medium",
-        timeStyle: "medium",
+        timeStyle: "short",
       });
 
+      let latestScoreItems = [];
+
       function text(id, value) {
-        document.getElementById(id).textContent = value ?? "-";
+        const element = document.getElementById(id);
+        if (element) element.textContent = value ?? "-";
+      }
+
+      function esc(value) {
+        return String(value ?? "-")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function parseTime(value) {
+        if (!value) return null;
+        const date = new Date(value.includes("T") ? value : value.replace(" ", "T") + "+08:00");
+        return Number.isNaN(date.valueOf()) ? null : date;
       }
 
       function formatTime(value) {
-        if (!value) return "-";
-        const date = new Date(value.includes("T") ? value : value.replace(" ", "T") + "+08:00");
-        return Number.isNaN(date.valueOf()) ? value : timeFmt.format(date);
+        const date = parseTime(value);
+        return date ? timeFmt.format(date) : value || "-";
+      }
+
+      function numericScore(value) {
+        const score = Number(value);
+        return Number.isFinite(score) ? score : null;
       }
 
       function changeLabel(row) {
@@ -284,6 +704,11 @@
         return `<span class="change">Unchanged</span>`;
       }
 
+      function feedbackLabel(value) {
+        const ok = String(value || "").toLowerCase() === "success";
+        return `<span class="feedback ${ok ? "" : "fail"}">${esc(value || "-")}</span>`;
+      }
+
       function renderTable(result) {
         const rows = result.top || [];
         if (!rows.length) {
@@ -291,102 +716,156 @@
           return;
         }
         const targetTeam = String(result.team || "").toLowerCase();
+        text("ranking-summary", `${rows.length} shown · ${fmt.format(result.total || rows.length)} total`);
         document.getElementById("table-wrap").innerHTML = `
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Team</th>
-                <th>Score</th>
-                <th>Submit Time</th>
-                <th>Change</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${rows
-                .map((row) => {
-                  const isTarget =
-                    String(row.team_name || "").toLowerCase() === targetTeam ||
-                    String(row.team_id || "").toLowerCase() === targetTeam;
-                  return `
-                    <tr class="${isTarget ? "target-row" : ""}">
-                      <td class="rank">${row.ranking ?? "-"}</td>
-                      <td>${row.team_name ?? "-"}</td>
-                      <td>${row.score == null ? "-" : fmt.format(row.score)}</td>
-                      <td>${formatTime(row.submit_time)}</td>
-                      <td>${changeLabel(row)}</td>
-                    </tr>
-                  `;
-                })
-                .join("")}
-            </tbody>
-          </table>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Team</th>
+                  <th>Score</th>
+                  <th>Submit Time</th>
+                  <th>Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows
+                  .map((row) => {
+                    const isTarget =
+                      String(row.team_name || "").toLowerCase() === targetTeam ||
+                      String(row.team_id || "").toLowerCase() === targetTeam;
+                    return `
+                      <tr class="${isTarget ? "target-row" : ""}">
+                        <td><span class="rank-cell">${esc(row.ranking)}</span></td>
+                        <td><span class="team-name">${esc(row.team_name)}</span></td>
+                        <td class="mono">${row.score == null ? "-" : fmt.format(row.score)}</td>
+                        <td>${formatTime(row.submit_time)}</td>
+                        <td>${changeLabel(row)}</td>
+                      </tr>
+                    `;
+                  })
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
         `;
       }
 
-      function renderSubmissions(data) {
-        const wrap = document.getElementById("submission-wrap");
-        if (!data || !Array.isArray(data.items) || !data.items.length) {
-          wrap.innerHTML = '<div class="empty">No submission history snapshot found.</div>';
-          text("submission-summary", "0 snapshots");
-          return;
-        }
-
-        const valid = data.items.filter((item) => Number(item.score) >= 0);
-        const failed = data.items.length - valid.length;
+      function summarizeSubmissions(data) {
+        const items = Array.isArray(data?.items) ? data.items : [];
+        const valid = items.filter((item) => {
+          const score = numericScore(item.score);
+          return score !== null && score >= 0;
+        });
+        const failed = items.length - valid.length;
         const best = valid.reduce((max, item) => {
           if (!max) return item;
           return Number(item.score) > Number(max.score) ? item : max;
         }, null);
+        const latest = items[0] || null;
+        return { best, failed, items, latest, valid };
+      }
+
+      function renderBestRuns(valid) {
+        const best = valid
+          .slice()
+          .sort((a, b) => Number(b.score) - Number(a.score))
+          .slice(0, 5);
+        text("best-runs-count", `${best.length} runs`);
+        if (!best.length) {
+          document.getElementById("best-runs").innerHTML = '<div class="empty">No scored submissions yet.</div>';
+          return;
+        }
+        document.getElementById("best-runs").innerHTML = best
+          .map(
+            (item, index) => `
+              <div class="list-row">
+                <div>
+                  <div class="list-title">#${index + 1} · ${esc(item.work_name)}</div>
+                  <div class="list-meta">${formatTime(item.submit_time)} · page ${esc(item.page)}</div>
+                </div>
+                <div class="list-score mono score-ok">${fmt.format(item.score)}</div>
+              </div>
+            `
+          )
+          .join("");
+      }
+
+      function renderSubmissions(data) {
+        const wrap = document.getElementById("submission-wrap");
+        const { best, failed, items, valid } = summarizeSubmissions(data);
+        if (!items.length) {
+          wrap.innerHTML = '<div class="empty">No submission history snapshot found.</div>';
+          text("submission-summary", "0 submissions");
+          renderBestRuns([]);
+          return;
+        }
 
         text(
           "submission-summary",
-          `${data.items.length} submissions · ${valid.length} scored · ${failed} failed · best ${best ? fmt.format(best.score) : "-"}`
+          `${items.length} submissions · ${valid.length} scored · ${failed} failed · best ${best ? fmt.format(best.score) : "-"}`
         );
+        renderBestRuns(valid);
 
         wrap.innerHTML = `
-          <table>
-            <thead>
-              <tr>
-                <th>Page</th>
-                <th>Submit Time</th>
-                <th>Work</th>
-                <th>Score</th>
-                <th>Feedback</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${data.items
-                .map((item) => {
-                  const ok = Number(item.score) >= 0;
-                  return `
-                    <tr>
-                      <td>${item.page ?? "-"}</td>
-                      <td>${formatTime(item.submit_time)}</td>
-                      <td>${item.work_name ?? "-"}</td>
-                      <td class="${ok ? "score-ok" : "score-fail"}">${item.score ?? "-"}</td>
-                      <td>${item.feedback ?? "-"}</td>
-                    </tr>
-                  `;
-                })
-                .join("")}
-            </tbody>
-          </table>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Submit Time</th>
+                  <th>Work</th>
+                  <th>Score</th>
+                  <th>Feedback</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${items
+                  .map((item) => {
+                    const score = numericScore(item.score);
+                    const ok = score !== null && score >= 0;
+                    return `
+                      <tr>
+                        <td>${esc(item.page)}</td>
+                        <td>${formatTime(item.submit_time)}</td>
+                        <td><span class="team-name">${esc(item.work_name)}</span></td>
+                        <td class="mono ${ok ? "score-ok" : "score-fail"}">${ok ? fmt.format(item.score) : esc(item.score)}</td>
+                        <td>${feedbackLabel(item.feedback)}</td>
+                      </tr>
+                    `;
+                  })
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
         `;
       }
 
       function drawScoreHistory(items) {
+        latestScoreItems = items || latestScoreItems;
         const canvas = document.getElementById("chart");
+        const rect = canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        const width = Math.max(360, Math.round(rect.width));
+        const height = Math.max(240, Math.round(rect.height));
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
         const ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const points = (items || [])
-          .filter((item) => Number(item.score) >= 0)
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, width, height);
+
+        const points = (latestScoreItems || [])
+          .filter((item) => {
+            const score = numericScore(item.score);
+            return score !== null && score >= 0;
+          })
           .slice()
           .reverse();
 
         if (!points.length) {
-          ctx.fillStyle = "#607080";
-          ctx.font = "18px sans-serif";
+          ctx.fillStyle = "#687789";
+          ctx.font = "16px sans-serif";
           ctx.fillText("No score history yet", 24, 44);
           return;
         }
@@ -394,42 +873,100 @@
         const scores = points.map((item) => Number(item.score));
         const minScore = Math.min(...scores);
         const maxScore = Math.max(...scores);
-        const pad = 28;
-        const width = canvas.width - pad * 2;
-        const height = canvas.height - pad * 2;
+        const padLeft = width < 520 ? 86 : 96;
+        const padRight = 24;
+        const padTop = 22;
+        const padBottom = 42;
+        const plotWidth = width - padLeft - padRight;
+        const plotHeight = height - padTop - padBottom;
         const span = Math.max(1, maxScore - minScore);
+        const yFor = (score) => padTop + (1 - (score - minScore) / span) * plotHeight;
+        const xFor = (index) =>
+          padLeft + (points.length === 1 ? plotWidth : (index / (points.length - 1)) * plotWidth);
 
-        ctx.strokeStyle = "#dde3ea";
+        ctx.strokeStyle = "#dde4ea";
         ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(pad, pad);
-        ctx.lineTo(pad, canvas.height - pad);
-        ctx.lineTo(canvas.width - pad, canvas.height - pad);
-        ctx.stroke();
+        ctx.fillStyle = "#687789";
+        ctx.font = "12px sans-serif";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        for (let i = 0; i <= 4; i += 1) {
+          const value = minScore + (span * i) / 4;
+          const y = yFor(value);
+          ctx.beginPath();
+          ctx.moveTo(padLeft, y);
+          ctx.lineTo(width - padRight, y);
+          ctx.stroke();
+          ctx.fillText(fmt.format(Math.round(value)), padLeft - 10, y);
+        }
 
-        ctx.strokeStyle = "#cc2f38";
+        ctx.beginPath();
+        points.forEach((point, index) => {
+          const x = xFor(index);
+          const y = yFor(Number(point.score));
+          if (index === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.lineTo(xFor(points.length - 1), padTop + plotHeight);
+        ctx.lineTo(xFor(0), padTop + plotHeight);
+        ctx.closePath();
+        ctx.fillStyle = "rgba(8, 116, 127, 0.11)";
+        ctx.fill();
+
+        ctx.strokeStyle = "#08747f";
         ctx.lineWidth = 3;
         ctx.beginPath();
         points.forEach((point, index) => {
-          const x = pad + (points.length === 1 ? width : (index / (points.length - 1)) * width);
-          const y = pad + (1 - (Number(point.score) - minScore) / span) * height;
+          const x = xFor(index);
+          const y = yFor(Number(point.score));
           if (index === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         });
         ctx.stroke();
 
-        const latest = points[points.length - 1];
-        const x = pad + width;
-        const y = pad + (1 - (Number(latest.score) - minScore) / span) * height;
-        ctx.fillStyle = "#cc2f38";
-        ctx.beginPath();
-        ctx.arc(x, y, 6, 0, Math.PI * 2);
-        ctx.fill();
+        points.forEach((point, index) => {
+          const x = xFor(index);
+          const y = yFor(Number(point.score));
+          ctx.fillStyle = index === points.length - 1 ? "#c5333e" : "#ffffff";
+          ctx.strokeStyle = index === points.length - 1 ? "#c5333e" : "#08747f";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(x, y, index === points.length - 1 ? 5 : 4, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        });
 
-        ctx.fillStyle = "#607080";
-        ctx.font = "14px sans-serif";
-        ctx.fillText(fmt.format(maxScore), pad + 6, pad + 16);
-        ctx.fillText(fmt.format(minScore), pad + 6, canvas.height - pad - 8);
+        const latest = points[points.length - 1];
+        text("chart-start", formatTime(points[0].submit_time));
+        text("chart-end", `Latest ${formatTime(latest.submit_time)} · ${fmt.format(latest.score)}`);
+      }
+
+      function updateMetrics(current, submissions) {
+        const result = current.targets?.[0];
+        const target = result?.target || {};
+        const summary = summarizeSubmissions(submissions);
+        const best = summary.best;
+        const latest = summary.latest;
+        const scoredRate = summary.items.length ? summary.valid.length / summary.items.length : null;
+
+        text("team-title", result?.team || "Tracked team");
+        text("subtitle", result?.competition_title || result?.name || "Competition data unavailable");
+        text("generated", `Updated ${formatTime(current.generated_at)}`);
+        text("rank", result?.found ? `#${target.ranking}` : "-");
+        text("rank-note", result?.found ? `${esc(target.team_name)} on the public leaderboard` : "Team not found");
+        text("score", target.score == null ? "-" : fmt.format(target.score));
+        text("score-foot", `Submitted ${formatTime(target.submit_time)}`);
+        text("best-score", best ? fmt.format(best.score) : "-");
+        text("best-score-foot", best ? formatTime(best.submit_time) : "No scored submissions");
+        text("latest-score", latest ? (numericScore(latest.score) >= 0 ? fmt.format(latest.score) : latest.score) : "-");
+        text("latest-score-foot", latest ? `${formatTime(latest.submit_time)} · ${latest.feedback || "-"}` : "No submissions");
+        text("scored-rate", scoredRate == null ? "-" : percentFmt.format(scoredRate));
+        text("scored-rate-foot", `${summary.valid.length} scored · ${summary.failed} failed`);
+        text("stage-tag", `Stage ${result?.stage_name || "-"}`);
+        text("total-tag", `${result?.total == null ? "-" : fmt.format(result.total)} teams`);
+        text("refresh-tag", `Ranking refresh ${formatTime(result?.refresh_time)}`);
+        text("score-history-count", `${summary.valid.length} scored submissions`);
+        document.getElementById("source-link").href = result?.competition_url || "#";
       }
 
       async function main() {
@@ -449,26 +986,16 @@
           return;
         }
 
-        const target = result.target || {};
-        text("subtitle", `${result.competition_title || result.name} · ${result.team}`);
-        text("generated", `Updated ${formatTime(current.generated_at)}`);
-        text("rank", result.found ? `#${target.ranking}` : "Not found");
-        text("score", target.score == null ? "-" : fmt.format(target.score));
-        text("total", result.total == null ? "-" : fmt.format(result.total));
-        text("stage", result.stage_name || "-");
-        document.getElementById("source-link").href = result.competition_url;
-
-        const scoreItems = submissions?.items || [];
-        const scoredItems = scoreItems.filter((item) => Number(item.score) >= 0);
-        text("score-history-count", `${scoredItems.length} scored submissions`);
+        updateMetrics(current, submissions);
         renderTable(result);
-        drawScoreHistory(scoreItems);
         renderSubmissions(submissions);
+        drawScoreHistory(submissions?.items || []);
+        window.addEventListener("resize", () => drawScoreHistory(latestScoreItems));
       }
 
       main().catch((error) => {
         document.getElementById("table-wrap").innerHTML =
-          `<div class="error">${error.message}</div>`;
+          `<div class="error">${esc(error.message)}</div>`;
       });
     </script>
   </body>
