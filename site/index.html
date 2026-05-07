@@ -275,15 +275,21 @@
         font-weight: 800;
       }
 
-      .layout {
+      .history-grid {
         display: grid;
         grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
         gap: 16px;
-        align-items: start;
+        align-items: stretch;
+        margin-bottom: 16px;
       }
 
       .panel {
         overflow: hidden;
+      }
+
+      .history-grid > .panel {
+        display: flex;
+        flex-direction: column;
       }
 
       .panel + .panel {
@@ -316,6 +322,7 @@
       }
 
       .chart-wrap {
+        flex: 1;
         padding: 12px 14px 16px;
       }
 
@@ -508,6 +515,7 @@
       }
 
       .compact-list {
+        flex: 1;
         padding: 12px 16px 16px;
       }
 
@@ -552,7 +560,7 @@
 
       @media (max-width: 920px) {
         .hero,
-        .layout {
+        .history-grid {
           grid-template-columns: 1fr;
         }
 
@@ -563,6 +571,7 @@
         .metrics {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+
       }
 
       @media (max-width: 640px) {
@@ -682,48 +691,36 @@
         </div>
       </section>
 
-      <section class="layout">
-        <div>
-          <section class="panel">
-            <div class="panel-head">
-              <h2>Score History</h2>
-              <span class="panel-kicker" id="score-history-count">-</span>
+      <section class="history-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Score History</h2>
+            <span class="panel-kicker" id="score-history-count">-</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="chart"></canvas>
+            <div class="chart-caption">
+              <span id="chart-start">-</span>
+              <span id="chart-end">-</span>
             </div>
-            <div class="chart-wrap">
-              <canvas id="chart"></canvas>
-              <div class="chart-caption">
-                <span id="chart-start">-</span>
-                <span id="chart-end">-</span>
-              </div>
-            </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="panel">
-            <div class="panel-head">
-              <h2>Top Ranking</h2>
-              <span class="panel-kicker" id="ranking-summary">-</span>
-            </div>
-            <div id="table-wrap"></div>
-          </section>
-        </div>
-
-        <aside>
-          <section class="panel">
-            <div class="panel-head">
-              <h2>Best Runs</h2>
-              <span class="panel-kicker" id="best-runs-count">-</span>
-            </div>
-            <div class="compact-list" id="best-runs"></div>
-          </section>
-        </aside>
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Best Runs</h2>
+            <span class="panel-kicker" id="best-runs-count">-</span>
+          </div>
+          <div class="compact-list" id="best-runs"></div>
+        </section>
       </section>
 
       <section class="panel">
         <div class="panel-head">
-          <h2>Submission History</h2>
-          <span class="panel-kicker" id="submission-summary">-</span>
+          <h2>Top Ranking</h2>
+          <span class="panel-kicker" id="ranking-summary">-</span>
         </div>
-        <div id="submission-wrap"></div>
+        <div id="table-wrap"></div>
       </section>
     </main>
 
@@ -768,11 +765,6 @@
       function numericScore(value) {
         const score = Number(value);
         return Number.isFinite(score) ? score : null;
-      }
-
-      function feedbackLabel(value) {
-        const ok = String(value || "").toLowerCase() === "success";
-        return `<span class="feedback ${ok ? "" : "fail"}">${esc(value || "-")}</span>`;
       }
 
       function renderRankingBars(result) {
@@ -875,56 +867,6 @@
           .join("");
       }
 
-      function renderSubmissions(data) {
-        const wrap = document.getElementById("submission-wrap");
-        const { best, failed, items, valid } = summarizeSubmissions(data);
-        if (!items.length) {
-          wrap.innerHTML = '<div class="empty">No submission history snapshot found.</div>';
-          text("submission-summary", "0 submissions");
-          renderBestRuns([]);
-          return;
-        }
-
-        text(
-          "submission-summary",
-          `${items.length} submissions · ${valid.length} scored · ${failed} failed · best ${best ? fmt.format(best.score) : "-"}`
-        );
-        renderBestRuns(valid);
-
-        wrap.innerHTML = `
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Page</th>
-                  <th>Submit Time</th>
-                  <th>Work</th>
-                  <th>Score</th>
-                  <th>Feedback</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${items
-                  .map((item) => {
-                    const score = numericScore(item.score);
-                    const ok = score !== null && score >= 0;
-                    return `
-                      <tr>
-                        <td>${esc(item.page)}</td>
-                        <td>${formatTime(item.submit_time)}</td>
-                        <td><span class="team-name">${esc(item.work_name)}</span></td>
-                        <td class="mono ${ok ? "score-ok" : "score-fail"}">${ok ? fmt.format(item.score) : esc(item.score)}</td>
-                        <td>${feedbackLabel(item.feedback)}</td>
-                      </tr>
-                    `;
-                  })
-                  .join("")}
-              </tbody>
-            </table>
-          </div>
-        `;
-      }
-
       function drawScoreHistory(items) {
         latestScoreItems = items || latestScoreItems;
         const canvas = document.getElementById("chart");
@@ -1024,6 +966,18 @@
         text("chart-end", `Latest ${formatTime(latest.submit_time)} · ${fmt.format(latest.score)}`);
       }
 
+      function syncHistoryPanelHeights() {
+        const panels = [...document.querySelectorAll(".history-grid > .panel")];
+        panels.forEach((panel) => {
+          panel.style.height = "";
+        });
+        if (window.matchMedia("(max-width: 920px)").matches || panels.length < 2) return;
+        const height = Math.max(...panels.map((panel) => panel.getBoundingClientRect().height));
+        panels.forEach((panel) => {
+          panel.style.height = `${Math.ceil(height)}px`;
+        });
+      }
+
       function updateMetrics(current, submissions) {
         const result = current.targets?.[0];
         const target = result?.target || {};
@@ -1071,9 +1025,13 @@
 
         updateMetrics(current, submissions);
         renderRankingBars(result);
-        renderSubmissions(submissions);
+        renderBestRuns(summarizeSubmissions(submissions).valid);
         drawScoreHistory(submissions?.items || []);
-        window.addEventListener("resize", () => drawScoreHistory(latestScoreItems));
+        requestAnimationFrame(syncHistoryPanelHeights);
+        window.addEventListener("resize", () => {
+          drawScoreHistory(latestScoreItems);
+          requestAnimationFrame(syncHistoryPanelHeights);
+        });
       }
 
       main().catch((error) => {
