@@ -1943,6 +1943,18 @@
       "ranking_change": "unchange",
       "ranking_change_num": 0,
       "refresh_time": "2026-05-24 00:05:01"
+    },
+    {
+      "checked_at": "2026-05-24T05:06:00+00:00",
+      "name": "Huawei Algorithm Challenge 37",
+      "competition_url_id": "1300000256",
+      "team": "hid_rl3ei4awlp8cx6k",
+      "found": true,
+      "ranking": 1,
+      "score": 372316195,
+      "ranking_change": "unchange",
+      "ranking_change_num": 0,
+      "refresh_time": "2026-05-24 05:05:01"
     }
   ]
 }
