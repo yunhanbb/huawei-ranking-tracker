@@ -1,52 +1,46 @@
 # Huawei Ranking Tracker
 
-这个仓库会定时抓取华为云开发者大赛指定队伍的排名，并用 GitHub Pages 展示当前排名、分数、Top 20 和历史曲线。
+这个项目通过 GitHub Actions 自动抓取数据，并通过 GitHub Pages 发布静态看板。
 
-默认目标已经配置为：
+## GitHub Pages
+
+- 首页：<https://yunhanbb.github.io/huawei-ranking-tracker/>
+- CANN 社区任务统计：<https://yunhanbb.github.io/huawei-ranking-tracker/cann-tasks.html>
+
+## 页面内容
+
+首页展示华为云开发者大赛指定队伍的公开榜单信息：
+
+- 当前排名、分数、参赛阶段和榜单刷新时间
+- Top 20 排名分数柱状图
+- 提交历史中的最佳成绩、最近提交和成功评分比例
+
+当前默认监控目标：
 
 - 比赛页面：<https://developer.huaweicloud.cn/competition/information/1300000256/ranking>
 - 队伍：`hid_rl3ei4awlp8cx6k`
 
-## 本地更新
+CANN 社区任务统计页展示 GitCode CANN 讨论页中的报名情况：
 
-```bash
-python scripts/update_rankings.py
-```
+- 来源讨论：<https://gitcode.com/org/cann/discussions/22>
+- 统计范围：2026-05-29 以后发布的报名评论
+- 任务范围：20 个 `20260529-*` 开发任务
+- 展示内容：每个任务的报名申请数量、任务状态、承接队伍、奖金和最近申请记录
 
-生成的数据在：
+## 自动更新
 
-- `site/data/rankings.json`
-- `site/data/history.json`
-- `site/data/cann_tasks.json`
+`.github/workflows/update-and-deploy.yml` 会每小时运行一次，也可以在 GitHub Actions 页面手动触发。
 
-本地预览：
+每次运行会：
 
-```bash
-python -m http.server 8000 -d site
-```
-
-然后打开 <http://localhost:8000>。
-
-## GitHub 使用
-
-1. 新建一个 GitHub 仓库。
-2. 把本目录推送到该仓库。
-3. 在仓库 `Settings -> Pages -> Build and deployment` 中选择 `GitHub Actions`。
-4. 到 `Actions` 页面手动运行一次 `Update ranking and deploy Pages`。
-
-之后 GitHub Actions 会每小时自动更新一次排名数据和 CANN 社区任务报名统计，并重新部署页面。
-
-## CANN 社区任务统计
-
-```bash
-python scripts/update_cann_tasks.py
-```
-
-脚本会自动抓取 <https://gitcode.com/org/cann/discussions/22> 中 2026-05-29 以后 20 个 `20260529-*` 开发任务的报名评论，生成 `site/data/cann_tasks.json`。页面入口是 `site/cann-tasks.html`，也可以从首页右上角 `CANN Tasks` 进入。
+1. 抓取华为云比赛排名数据，更新 `site/data/rankings.json` 和 `site/data/history.json`。
+2. 抓取 CANN 社区任务讨论数据，更新 `site/data/cann_tasks.json`。
+3. 将更新后的数据提交回仓库。
+4. 使用 GitHub Pages 部署 `site/` 目录。
 
 ## 修改监控目标
 
-编辑 `config.json`：
+监控的比赛和队伍配置在 `config.json`：
 
 ```json
 {
@@ -63,4 +57,4 @@ python scripts/update_cann_tasks.py
 }
 ```
 
-`team` 可以填写队伍名或接口里的 `team_id`。如果要固定某个赛段，也可以在目标里补充 `stage_id`。
+`team` 可以填写队伍名或接口里的 `team_id`。如果要固定某个赛段，可以在目标里补充 `stage_id`。
