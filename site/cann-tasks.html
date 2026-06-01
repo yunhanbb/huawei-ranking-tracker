@@ -236,23 +236,23 @@
 
       table {
         width: 100%;
-        min-width: 1120px;
+        min-width: 1240px;
         border-collapse: collapse;
       }
 
       th,
       td {
-        padding: 16px 18px;
+        padding: 18px 20px;
         border-bottom: 1px solid var(--line);
         text-align: left;
         vertical-align: top;
-        font-size: 16px;
+        font-size: 17px;
       }
 
       th {
         color: var(--muted);
         background: var(--surface-2);
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 850;
         text-transform: uppercase;
       }
@@ -263,19 +263,19 @@
 
       .task-title {
         color: var(--ink);
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 780;
       }
 
       .muted {
         color: var(--muted);
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.4;
       }
 
       .count {
         color: var(--accent);
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 900;
       }
 
@@ -287,7 +287,7 @@
         border-radius: 8px;
         background: #eef7f0;
         color: var(--green);
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 800;
       }
 
@@ -297,9 +297,10 @@
       }
 
       .teams {
-        max-width: 280px;
-        color: var(--text);
-        line-height: 1.45;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        max-width: 360px;
       }
 
       .deadline {
@@ -310,9 +311,41 @@
 
       .bonus {
         color: var(--accent);
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 900;
         white-space: nowrap;
+      }
+
+      .labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .latest-labels {
+        display: grid;
+        gap: 7px;
+      }
+
+      .label {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        min-height: 30px;
+        padding: 0 11px;
+        border: 1px solid var(--label-line);
+        border-radius: 8px;
+        background: var(--label-bg);
+        color: var(--label-text);
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.25;
+      }
+
+      .label.empty {
+        --label-bg: #f4f6f8;
+        --label-line: #dde4ea;
+        --label-text: #687789;
       }
 
       .empty,
@@ -457,6 +490,38 @@
         return date ? timeFmt.format(date) : value || "-";
       }
 
+      const labelThemes = [
+        { bg: "#e8f6f6", line: "#b9dcdf", text: "#075f68" },
+        { bg: "#fff1f1", line: "#f0c3c7", text: "#9b1c1f" },
+        { bg: "#eef7f0", line: "#bddfc8", text: "#167a4d" },
+        { bg: "#fff6e8", line: "#efd0a4", text: "#8a4e00" },
+        { bg: "#eef3ff", line: "#c9d6f0", text: "#34558b" },
+        { bg: "#f2efff", line: "#d8cff7", text: "#5a438f" },
+      ];
+
+      function labelStyle(index) {
+        const theme = labelThemes[index % labelThemes.length];
+        return `--label-bg: ${theme.bg}; --label-line: ${theme.line}; --label-text: ${theme.text};`;
+      }
+
+      function splitNames(value) {
+        return String(value || "")
+          .split(/[、,，]/)
+          .map((item) => item.trim())
+          .filter(Boolean);
+      }
+
+      function renderLabels(items, className = "labels") {
+        if (!items.length) return '<span class="label empty">-</span>';
+        return `
+          <div class="${className}">
+            ${items
+              .map((item, index) => `<span class="label" style="${labelStyle(index)}">${esc(item)}</span>`)
+              .join("")}
+          </div>
+        `;
+      }
+
       function renderTable(tasks) {
         if (!tasks.length) {
           document.getElementById("table-wrap").innerHTML = '<div class="empty">No tasks found.</div>';
@@ -480,11 +545,11 @@
               <tbody>
                 ${tasks
                   .map((task) => {
-                    const latest = (task.applications || [])
+                    const latestItems = (task.applications || [])
                       .slice(-3)
                       .reverse()
-                      .map((item) => `${esc(item.team || item.gitcode_account || item.user_name)} · ${formatTime(item.created_date)}`)
-                      .join("<br>");
+                      .map((item) => `${item.team || item.gitcode_account || item.user_name} · ${formatTime(item.created_date)}`);
+                    const teams = splitNames(task.assignees);
                     return `
                       <tr>
                         <td>
@@ -493,9 +558,9 @@
                         <td><span class="count">${fmt.format(task.application_count)}</span></td>
                         <td><span class="pill ${task.status === "锁定" ? "locked" : ""}">${esc(task.status)}</span></td>
                         <td><span class="deadline">${esc(task.deadline)}</span></td>
-                        <td class="teams">${esc(task.assignees || "-")}</td>
+                        <td class="teams">${renderLabels(teams)}</td>
                         <td><span class="bonus">${esc(task.bonus)}</span></td>
-                        <td class="muted">${latest || "-"}</td>
+                        <td>${renderLabels(latestItems, "latest-labels")}</td>
                       </tr>
                     `;
                   })
