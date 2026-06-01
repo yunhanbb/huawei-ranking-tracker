@@ -297,9 +297,6 @@
       }
 
       .teams {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
         max-width: 360px;
       }
 
@@ -342,10 +339,10 @@
         line-height: 1.25;
       }
 
-      .label.empty {
-        --label-bg: #f4f6f8;
-        --label-line: #dde4ea;
-        --label-text: #687789;
+      .empty-value {
+        display: inline;
+        color: var(--muted);
+        font-weight: 700;
       }
 
       .empty,
@@ -512,7 +509,7 @@
       }
 
       function renderLabels(items, className = "labels") {
-        if (!items.length) return '<span class="label empty">-</span>';
+        if (!items.length) return '<span class="empty-value">-</span>';
         return `
           <div class="${className}">
             ${items
