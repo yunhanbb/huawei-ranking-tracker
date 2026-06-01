@@ -25,7 +25,9 @@ jobs:
           python-version: "3.12"
 
       - name: Fetch latest ranking
-        run: python scripts/update_rankings.py
+        run: |
+          python scripts/update_rankings.py
+          python scripts/update_cann_tasks.py
 
       - name: Commit updated data
         run: |

@@ -1,0 +1,551 @@
+{
+  "generated_at": "2026-06-01T04:33:39+00:00",
+  "source": "https://gitcode.com/org/cann/discussions/22",
+  "source_id": "5162848",
+  "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
+  "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
+  "start_date": "2026-05-29T00:00:00+08:00",
+  "task_count": 20,
+  "comment_total": 326,
+  "application_comment_count": 28,
+  "ignored_comment_count": 2,
+  "tasks": [
+    {
+      "id": "20260529-1",
+      "number": 1,
+      "title": "aclsolverCheevj 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/aclsolverCheevj_task_doc.md",
+      "status": "锁定",
+      "assignees": "hack_ai、willooo、桶桶罐罐",
+      "bonus": "90415.5元",
+      "deadline": "2026.07.30",
+      "application_count": 3,
+      "applications": [
+        {
+          "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
+          "serial_number": 345,
+          "created_date": "2026-05-30T19:18:16+08:00",
+          "user_name": "zhouyifengCode",
+          "team": "hack_ai",
+          "gitcode_account": "zhouyifengCode",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-solver"
+        },
+        {
+          "comment_id": "3d714054a26e473a8ec3939db35dd406",
+          "serial_number": 347,
+          "created_date": "2026-05-30T21:10:58+08:00",
+          "user_name": "willooo",
+          "team": "willooo",
+          "gitcode_account": "willooo",
+          "status": "报名",
+          "link": "https://gitcode.com/willooo/ops-solve"
+        },
+        {
+          "comment_id": "a56e288953c34d288d9495f92a9fd977",
+          "serial_number": 350,
+          "created_date": "2026-05-31T00:02:12+08:00",
+          "user_name": "zzkuner",
+          "team": "桶桶罐罐",
+          "gitcode_account": "zzkuner",
+          "status": "报名",
+          "link": "https://gitcode.com/zzkuner/ops-solve"
+        }
+      ]
+    },
+    {
+      "id": "20260529-2",
+      "number": 2,
+      "title": "三角矩阵求解运算系列算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/aclblasTrsmBatched_task_doc.md",
+      "status": "开放",
+      "assignees": "",
+      "bonus": "82240.5元",
+      "deadline": "2026.07.30",
+      "application_count": 0,
+      "applications": []
+    },
+    {
+      "id": "20260529-3",
+      "number": 3,
+      "title": "SPMV 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/SPMV_task_doc.md",
+      "status": "开放",
+      "assignees": "",
+      "bonus": "72430.5元",
+      "deadline": "2026.07.30",
+      "application_count": 0,
+      "applications": []
+    },
+    {
+      "id": "20260529-4",
+      "number": 4,
+      "title": "cast&EmbeddingDenseGrad 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Cast&EmbeddingDenseGrad_task_doc.md",
+      "status": "开放",
+      "assignees": "昇腾推理越极限团队",
+      "bonus": "69651元",
+      "deadline": "2026.07.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "504a6bedc50c4c51add5d555a5a12111",
+          "serial_number": 333,
+          "created_date": "2026-05-29T21:41:05+08:00",
+          "user_name": "Dr-Ding2026",
+          "team": "昇腾推理越极限团队",
+          "gitcode_account": "Dr-Ding2026",
+          "status": "报名",
+          "link": "https://gitcode.com/Dr-Ding2026/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-5",
+      "number": 5,
+      "title": "DynamicMap容器算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/dynamicMap_task_doc.md",
+      "status": "开放",
+      "assignees": "",
+      "bonus": "60985.5元",
+      "deadline": "2026.06.30",
+      "application_count": 0,
+      "applications": []
+    },
+    {
+      "id": "20260529-6",
+      "number": 6,
+      "title": "MinDim&MaxDim 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/MinDim&MaxDim_task_doc.md",
+      "status": "开放",
+      "assignees": "看不到我",
+      "bonus": "58860元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
+          "serial_number": 354,
+          "created_date": "2026-06-01T00:47:04+08:00",
+          "user_name": "LiJianhao2",
+          "team": "看不到我",
+          "gitcode_account": "LiJianhao2",
+          "status": "报名",
+          "link": "https://gitcode.com/LiJianhao2/ops-math_5296"
+        }
+      ]
+    },
+    {
+      "id": "20260529-7",
+      "number": 7,
+      "title": "SyncBatchNormGatherStats 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/SyncBatchNormGatherStats_task_doc.md",
+      "status": "开放",
+      "assignees": "",
+      "bonus": "57715.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "e1896bc903ff4b8bbcb8183c22db65e4",
+          "serial_number": 334,
+          "created_date": "2026-05-29T22:33:55+08:00",
+          "user_name": "hustding",
+          "team": "昇腾推理越极限团队",
+          "gitcode_account": "hustding",
+          "status": "报名",
+          "link": "https://gitcode.com/hustding/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-8",
+      "number": 8,
+      "title": "Im2col 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/im2col_task_doc.md",
+      "status": "开放",
+      "assignees": "跑刀的鼠鼠",
+      "bonus": "50194.5元",
+      "deadline": "2026.06.30",
+      "application_count": 2,
+      "applications": [
+        {
+          "comment_id": "a8d4de62a427417c8dc0969d09c43344",
+          "serial_number": 352,
+          "created_date": "2026-05-31T00:12:47+08:00",
+          "user_name": "gcw_7Kyyz1cg",
+          "team": "跑刀的鼠鼠",
+          "gitcode_account": "gcw_7Kyyz1cg",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "60a23e33a0b3468f9119050adb9baf21",
+          "serial_number": 363,
+          "created_date": "2026-06-01T12:25:57+08:00",
+          "user_name": "kekooooooo",
+          "team": "keke",
+          "gitcode_account": "kekooooooo",
+          "status": "报名",
+          "link": "https://gitcode.com/kekooooooo/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-9",
+      "number": 9,
+      "title": "bincount 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/bincount_task_doc.md",
+      "status": "开放",
+      "assignees": "今天要吃三碗饭",
+      "bonus": "40384.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "f3cd803d3a984012ac91ad25b13e2680",
+          "serial_number": 351,
+          "created_date": "2026-05-31T00:05:53+08:00",
+          "user_name": "qq_62078295",
+          "team": "今天要吃三碗饭",
+          "gitcode_account": "qq_62078295",
+          "status": "报名",
+          "link": "https://gitcode.com/qq_62078295/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-10",
+      "number": 10,
+      "title": "RightShift算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/RightShift_task_doc.md",
+      "status": "开放",
+      "assignees": "曼波、不知名队",
+      "bonus": "29430元",
+      "deadline": "2026.06.30",
+      "application_count": 2,
+      "applications": [
+        {
+          "comment_id": "6199d34226214535b6d4f3feae241dfe",
+          "serial_number": 335,
+          "created_date": "2026-05-29T23:37:14+08:00",
+          "user_name": "CyndiZ",
+          "team": "曼波",
+          "gitcode_account": "CyndiZ",
+          "status": "报名",
+          "link": "https://gitcode.com/CyndiZ/ops-nn"
+        },
+        {
+          "comment_id": "a1d89efd37ac4231942eda08636cee8b",
+          "serial_number": 343,
+          "created_date": "2026-05-30T13:21:32+08:00",
+          "user_name": "fasdfaefsd",
+          "team": "不知名队",
+          "gitcode_account": "fasdfaefsd",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-11",
+      "number": 11,
+      "title": "FmodTensor&FmodScalar 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/FmodScalar&FmodTensor_task_doc.md",
+      "status": "开放",
+      "assignees": "GGBond",
+      "bonus": "25015.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "2f6b42b941a14c52a805f804cbc1d084",
+          "serial_number": 336,
+          "created_date": "2026-05-29T23:41:39+08:00",
+          "user_name": "szdaniel",
+          "team": "GGBond",
+          "gitcode_account": "szdaniel",
+          "status": "报名",
+          "link": "https://gitcode.com/szdaniel/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-12",
+      "number": 12,
+      "title": "UpsampleNearest3d 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/UpsampleNearest3d_task_doc.md",
+      "status": "开放",
+      "assignees": "珞珈山猫猫虫",
+      "bonus": "23380.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "fc54e846b9bc47519f43aa907a1ae00f",
+          "serial_number": 355,
+          "created_date": "2026-06-01T01:38:15+08:00",
+          "user_name": "HyosungSink",
+          "team": "珞珈山猫猫虫",
+          "gitcode_account": "HyosungSink",
+          "status": "报名",
+          "link": "https://gitcode.com/HyosungSink/ops-cv"
+        }
+      ]
+    },
+    {
+      "id": "20260529-13",
+      "number": 13,
+      "title": "logspace 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/logspace_task_doc.md",
+      "status": "锁定",
+      "assignees": "linux012、菜鸟、菜鸡",
+      "bonus": "23380.5元",
+      "deadline": "2026.06.30",
+      "application_count": 3,
+      "applications": [
+        {
+          "comment_id": "08ed45d6b4854ee190dcb3b5b9ccb81c",
+          "serial_number": 340,
+          "created_date": "2026-05-30T13:15:11+08:00",
+          "user_name": "linux12",
+          "team": "linux012",
+          "gitcode_account": "linux12",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "81888f1b689e40d695884f40d890dae3",
+          "serial_number": 341,
+          "created_date": "2026-05-30T13:16:18+08:00",
+          "user_name": "ilovescrapy",
+          "team": "菜鸟",
+          "gitcode_account": "ilovescrapy",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "0f0ae4052a0f4b3c88b803bb4c6335c6",
+          "serial_number": 342,
+          "created_date": "2026-05-30T13:17:50+08:00",
+          "user_name": "aaasaaaffsd",
+          "team": "菜鸡",
+          "gitcode_account": "aaasaaaffsd",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-14",
+      "number": 14,
+      "title": "UpsampleNearestExact1d&UpsampleNearestExact2d 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/UpsampleNearestExact1d&UpsampleNearestExact2d_task_doc.md",
+      "status": "开放",
+      "assignees": "小大",
+      "bonus": "23380.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "3a650ec73a57417fa57212fad3ee0aef",
+          "serial_number": 360,
+          "created_date": "2026-06-01T10:32:52+08:00",
+          "user_name": "KaranocaVe",
+          "team": "小大",
+          "gitcode_account": "KaranocaVe",
+          "status": "报名",
+          "link": "https://gitcode.com/karanocave/ops-cv"
+        }
+      ]
+    },
+    {
+      "id": "20260529-15",
+      "number": 15,
+      "title": "aclnnArange 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Arange_task_doc.md",
+      "status": "开放",
+      "assignees": "",
+      "bonus": "22399.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "0bbf4772ab3f4a36a32053086e25423c",
+          "serial_number": 361,
+          "created_date": "2026-06-01T11:55:26+08:00",
+          "user_name": "hth810",
+          "team": "蓝的盆",
+          "gitcode_account": "hth810",
+          "status": "报名",
+          "link": "https://gitcode.com/hth810/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-16",
+      "number": 16,
+      "title": "Gcd 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Gcd_task_doc.md",
+      "status": "锁定",
+      "assignees": "yc小分队、yangb、yutian",
+      "bonus": "22399.5元",
+      "deadline": "2026.06.30",
+      "application_count": 3,
+      "applications": [
+        {
+          "comment_id": "902ed7ea6cb34521a6f28ba46ff8915b",
+          "serial_number": 338,
+          "created_date": "2026-05-30T10:18:21+08:00",
+          "user_name": "gcw_K5CvmS79",
+          "team": "yc小分队",
+          "gitcode_account": "gcw_K5CvmS79",
+          "status": "报名",
+          "link": "https://gitcode.com/gcw_K5CvmS79/ops-nn"
+        },
+        {
+          "comment_id": "81cdac80921343ecada6967500507f2e",
+          "serial_number": 339,
+          "created_date": "2026-05-30T11:25:07+08:00",
+          "user_name": "weixin_44073835",
+          "team": "yangb",
+          "gitcode_account": "weixin_44073835",
+          "status": "报名",
+          "link": "https://gitcode.com/weixin_44073835/ops-nn"
+        },
+        {
+          "comment_id": "7c417ff89c5e4f42a698558b395a9b3a",
+          "serial_number": 356,
+          "created_date": "2026-06-01T09:22:10+08:00",
+          "user_name": "yutianp",
+          "team": "yutian",
+          "gitcode_account": "yutianp",
+          "status": "报名",
+          "link": "https://gitcode.com/yutianp/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-17",
+      "number": 17,
+      "title": "InplaceRsqrt 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/InplaceRsqrt_task_doc.md",
+      "status": "开放",
+      "assignees": "NoOne",
+      "bonus": "17985元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "04abc1fc65ea4e40b17862d90f09e59b",
+          "serial_number": 332,
+          "created_date": "2026-05-29T21:33:36+08:00",
+          "user_name": "Nice_try",
+          "team": "NoOne",
+          "gitcode_account": "Nice_try",
+          "status": "报名",
+          "link": "https://gitcode.com/Nice_try/ops-math"
+        }
+      ]
+    },
+    {
+      "id": "20260529-18",
+      "number": 18,
+      "title": "Relu算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Relu_task_doc.md",
+      "status": "开放",
+      "assignees": "披荆斩棘、xy cheng",
+      "bonus": "17494.5元",
+      "deadline": "2026.06.30",
+      "application_count": 2,
+      "applications": [
+        {
+          "comment_id": "bd0007f11486421c84c1180027de25d0",
+          "serial_number": 349,
+          "created_date": "2026-05-30T23:18:55+08:00",
+          "user_name": "cxj01",
+          "team": "披荆斩棘",
+          "gitcode_account": "cxj01",
+          "status": "报名",
+          "link": "https://gitcode.com/cxj01/ops-nn_relu"
+        },
+        {
+          "comment_id": "458556235f414731b469fe079ced89c8",
+          "serial_number": 353,
+          "created_date": "2026-06-01T00:10:26+08:00",
+          "user_name": "gcw_fiAo4tDr",
+          "team": "xy cheng",
+          "gitcode_account": "gcw_fiAo4tDr",
+          "status": "报名",
+          "link": "https://gitcode.com/gcw_fiAo4tDr/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-19",
+      "number": 19,
+      "title": "InplaceSigmoid 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/InplaceSigmoid_task_doc.md",
+      "status": "开放",
+      "assignees": "卡拉米、GoOn",
+      "bonus": "17494.5元",
+      "deadline": "2026.06.30",
+      "application_count": 3,
+      "applications": [
+        {
+          "comment_id": "6b9ac63df9af453f88627a8b4f2f5a4f",
+          "serial_number": 337,
+          "created_date": "2026-05-30T08:28:56+08:00",
+          "user_name": "FirstOp",
+          "team": "卡拉米",
+          "gitcode_account": "FirstOp",
+          "status": "报名",
+          "link": "https://gitcode.com/szdaniel/ops-math"
+        },
+        {
+          "comment_id": "8d3d30472cab48eab1ebae1e07583ce7",
+          "serial_number": 358,
+          "created_date": "2026-06-01T09:58:29+08:00",
+          "user_name": "potatohaha",
+          "team": "番茄土豆",
+          "gitcode_account": "potatohaha",
+          "status": "报名",
+          "link": "https://gitcode.com/potatohaha/ops-nn"
+        },
+        {
+          "comment_id": "22782ccbef184392b1f7e5e244924c8f",
+          "serial_number": 359,
+          "created_date": "2026-06-01T09:58:32+08:00",
+          "user_name": "run-op-test",
+          "team": "GoOn",
+          "gitcode_account": "RunOpTest",
+          "status": "报名",
+          "link": "https://gitcode.com/run-op-test/ops-nn"
+        }
+      ]
+    },
+    {
+      "id": "20260529-20",
+      "number": 20,
+      "title": "IndexFillTensor 算子开发",
+      "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/IndexFillTensor_task_doc.md",
+      "status": "开放",
+      "assignees": "Aeolion",
+      "bonus": "16840.5元",
+      "deadline": "2026.06.30",
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "9ae41ef3758d491ea85003d79f07b23a",
+          "serial_number": 348,
+          "created_date": "2026-05-30T22:03:10+08:00",
+          "user_name": "Admin05210",
+          "team": "Aeolion",
+          "gitcode_account": "Admin05210",
+          "status": "报名",
+          "link": "https://gitcode.com/Admin05210/ops-nn"
+        }
+      ]
+    }
+  ]
+}

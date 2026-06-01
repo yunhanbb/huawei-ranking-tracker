@@ -17,6 +17,7 @@ python scripts/update_rankings.py
 
 - `site/data/rankings.json`
 - `site/data/history.json`
+- `site/data/cann_tasks.json`
 
 本地预览：
 
@@ -33,7 +34,15 @@ python -m http.server 8000 -d site
 3. 在仓库 `Settings -> Pages -> Build and deployment` 中选择 `GitHub Actions`。
 4. 到 `Actions` 页面手动运行一次 `Update ranking and deploy Pages`。
 
-之后 GitHub Actions 会每 10 分钟自动更新一次排名数据并重新部署页面。
+之后 GitHub Actions 会每小时自动更新一次排名数据和 CANN 社区任务报名统计，并重新部署页面。
+
+## CANN 社区任务统计
+
+```bash
+python scripts/update_cann_tasks.py
+```
+
+脚本会自动抓取 <https://gitcode.com/org/cann/discussions/22> 中 2026-05-29 以后 20 个 `20260529-*` 开发任务的报名评论，生成 `site/data/cann_tasks.json`。页面入口是 `site/cann-tasks.html`，也可以从首页右上角 `CANN Tasks` 进入。
 
 ## 修改监控目标
 

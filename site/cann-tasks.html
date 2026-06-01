@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CANN Community Task Applications</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f1ea;
+        --surface: #ffffff;
+        --surface-2: #faf8f3;
+        --ink: #17202a;
+        --text: #273340;
+        --muted: #687789;
+        --line: #dde4ea;
+        --line-strong: #cbd6df;
+        --accent: #c5333e;
+        --teal: #08747f;
+        --green: #167a4d;
+        --amber: #a35d00;
+        --shadow: 0 10px 24px rgba(28, 38, 48, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 44px;
+      }
+
+      .topbar,
+      .actions,
+      .brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .topbar {
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 20px;
+      }
+
+      .brand {
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        background: var(--ink);
+        color: #fff;
+        font-weight: 850;
+        flex: 0 0 auto;
+      }
+
+      .brand-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .brand-meta {
+        margin: 2px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .actions {
+        gap: 10px;
+        flex: 0 0 auto;
+      }
+
+      .button-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        padding: 0 13px;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .hero,
+      .panel,
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        padding: 24px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 34px;
+        line-height: 1.08;
+      }
+
+      .subtitle {
+        max-width: 780px;
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .summary-tile {
+        min-width: 190px;
+        padding: 18px;
+        border: 1px solid #c3dfe2;
+        border-radius: 8px;
+        background: #e8f6f6;
+      }
+
+      .summary-label {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .summary-number {
+        margin-top: 8px;
+        color: var(--teal);
+        font-size: 52px;
+        line-height: 0.95;
+        font-weight: 900;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .metric {
+        min-height: 100px;
+        padding: 15px;
+      }
+
+      .metric-label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .metric-value {
+        margin-top: 12px;
+        color: var(--ink);
+        font-size: 27px;
+        line-height: 1;
+        font-weight: 880;
+        overflow-wrap: anywhere;
+      }
+
+      .metric-foot {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .panel {
+        overflow: hidden;
+      }
+
+      .panel-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        min-height: 58px;
+        padding: 15px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-head h2 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .panel-kicker {
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        min-width: 900px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 13px 16px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        background: var(--surface-2);
+        font-size: 12px;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      tbody tr:hover {
+        background: #fbfcfd;
+      }
+
+      .task-title {
+        color: var(--ink);
+        font-weight: 780;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .count {
+        color: var(--accent);
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 0 9px;
+        border-radius: 8px;
+        background: #eef7f0;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .pill.locked {
+        background: #fff1e5;
+        color: var(--amber);
+      }
+
+      .teams {
+        max-width: 280px;
+        color: var(--text);
+        line-height: 1.45;
+      }
+
+      .empty,
+      .error {
+        padding: 20px;
+        color: var(--muted);
+      }
+
+      .error {
+        color: #9b1c1f;
+      }
+
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-tile {
+          min-width: 0;
+        }
+
+        .metrics {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 22px, 1180px);
+          padding-top: 18px;
+        }
+
+        .topbar,
+        .actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .actions,
+        .button-link {
+          width: 100%;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .hero {
+          padding: 18px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="topbar" aria-label="links">
+        <div class="brand">
+          <div class="mark">C</div>
+          <div>
+            <p class="brand-title">CANN Community Tasks</p>
+            <p class="brand-meta">GitCode discussion application statistics</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="button-link" href="./">Ranking Tracker</a>
+          <a class="button-link" id="source-link" href="https://gitcode.com/org/cann/discussions/22" target="_blank" rel="noreferrer">Open Discussion</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-label="CANN task application summary">
+        <div>
+          <h1 id="page-title">Loading CANN task applications...</h1>
+          <p class="subtitle" id="subtitle">Counting application comments submitted after 2026-05-29.</p>
+        </div>
+        <div class="summary-tile">
+          <div class="summary-label">Applications</div>
+          <div class="summary-number" id="total-applications">-</div>
+          <div class="muted" id="generated">Waiting for data</div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="summary metrics">
+        <div class="metric">
+          <div class="metric-label">Tracked Tasks</div>
+          <div class="metric-value" id="task-count">-</div>
+          <div class="metric-foot">20260529-1 to 20260529-20</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Most Applied</div>
+          <div class="metric-value" id="top-task">-</div>
+          <div class="metric-foot" id="top-task-foot">-</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">No Applications</div>
+          <div class="metric-value" id="zero-count">-</div>
+          <div class="metric-foot">Tasks with no matched application comments</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Source Comments</div>
+          <div class="metric-value" id="source-comments">-</div>
+          <div class="metric-foot">Discussion comment total</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Application Count by Task</h2>
+          <span class="panel-kicker" id="filter-note">After 2026-05-29</span>
+        </div>
+        <div id="table-wrap"></div>
+      </section>
+    </main>
+
+    <script>
+      const fmt = new Intl.NumberFormat("zh-CN");
+      const timeFmt = new Intl.DateTimeFormat("zh-CN", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      });
+
+      function text(id, value) {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value ?? "-";
+      }
+
+      function esc(value) {
+        return String(value ?? "-")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function parseTime(value) {
+        if (!value) return null;
+        const date = new Date(value);
+        return Number.isNaN(date.valueOf()) ? null : date;
+      }
+
+      function formatTime(value) {
+        const date = parseTime(value);
+        return date ? timeFmt.format(date) : value || "-";
+      }
+
+      function renderTable(tasks) {
+        if (!tasks.length) {
+          document.getElementById("table-wrap").innerHTML = '<div class="empty">No tasks found.</div>';
+          return;
+        }
+
+        document.getElementById("table-wrap").innerHTML = `
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Applications</th>
+                  <th>Status</th>
+                  <th>Current Teams</th>
+                  <th>Bonus</th>
+                  <th>Latest Applications</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tasks
+                  .map((task) => {
+                    const latest = (task.applications || [])
+                      .slice(-3)
+                      .reverse()
+                      .map((item) => `${esc(item.team || item.gitcode_account || item.user_name)} · ${formatTime(item.created_date)}`)
+                      .join("<br>");
+                    return `
+                      <tr>
+                        <td>
+                          <a class="task-title" href="${esc(task.link)}" target="_blank" rel="noreferrer">${esc(task.id)} · ${esc(task.title)}</a>
+                          <div class="muted">Deadline ${esc(task.deadline)}</div>
+                        </td>
+                        <td><span class="count">${fmt.format(task.application_count)}</span></td>
+                        <td><span class="pill ${task.status === "锁定" ? "locked" : ""}">${esc(task.status)}</span></td>
+                        <td class="teams">${esc(task.assignees || "-")}</td>
+                        <td>${esc(task.bonus)}</td>
+                        <td class="muted">${latest || "-"}</td>
+                      </tr>
+                    `;
+                  })
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      async function main() {
+        const data = await fetch("./data/cann_tasks.json").then((res) => res.json());
+        const tasks = data.tasks || [];
+        const totalApplications = tasks.reduce((sum, task) => sum + Number(task.application_count || 0), 0);
+        const topTask = tasks.slice().sort((a, b) => b.application_count - a.application_count)[0];
+        const zeroCount = tasks.filter((task) => !task.application_count).length;
+
+        text("page-title", data.discussion_title || "CANN Community Task Applications");
+        text("subtitle", `统计 ${data.start_date || "2026-05-29"} 之后，讨论页中 20 个 20260529 开发任务的报名申请。`);
+        text("total-applications", fmt.format(totalApplications));
+        text("generated", `Updated ${formatTime(data.generated_at)}`);
+        text("task-count", fmt.format(data.task_count || tasks.length));
+        text("top-task", topTask ? topTask.id : "-");
+        text("top-task-foot", topTask ? `${topTask.title} · ${fmt.format(topTask.application_count)} applications` : "-");
+        text("zero-count", fmt.format(zeroCount));
+        text("source-comments", fmt.format(data.comment_total || 0));
+        text("filter-note", `${fmt.format(data.application_comment_count || 0)} matched application comments`);
+        document.getElementById("source-link").href = data.source || "https://gitcode.com/org/cann/discussions/22";
+        renderTable(tasks);
+      }
+
+      main().catch((error) => {
+        document.getElementById("table-wrap").innerHTML = `<div class="error">${esc(error.message)}</div>`;
+      });
+    </script>
+  </body>
+</html>
