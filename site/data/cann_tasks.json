@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-01T09:00:56+00:00",
+  "generated_at": "2026-06-01T09:41:10+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 336,
-  "application_comment_count": 38,
+  "comment_total": 337,
+  "application_comment_count": 39,
   "ignored_comment_count": 2,
   "tasks": [
     {
@@ -62,7 +62,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -83,6 +83,16 @@
           "gitcode_account": "jingdemeng",
           "status": "报名",
           "link": "https://gitcode.com/jingdemeng/ops-blas.git"
+        },
+        {
+          "comment_id": "a3a4d2ef3445422faf24f54a3241a5bb",
+          "serial_number": 376,
+          "created_date": "2026-06-01T17:03:54+08:00",
+          "user_name": "yogstar",
+          "team": "sleepy",
+          "gitcode_account": "yogstar",
+          "status": "报名",
+          "link": "https://gitcode.com/yogstar/ops-blas.git"
         }
       ]
     },
