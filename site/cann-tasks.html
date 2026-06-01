@@ -32,6 +32,7 @@
         min-height: 100vh;
         background: var(--bg);
         color: var(--text);
+        font-size: 16px;
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           sans-serif;
@@ -81,14 +82,14 @@
       .brand-title {
         margin: 0;
         color: var(--ink);
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.2;
       }
 
       .brand-meta {
         margin: 2px 0 0;
         color: var(--muted);
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.35;
       }
 
@@ -107,7 +108,7 @@
         border-radius: 8px;
         background: var(--surface);
         color: var(--ink);
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 700;
       }
 
@@ -132,7 +133,7 @@
       h1 {
         margin: 0;
         color: var(--ink);
-        font-size: 34px;
+        font-size: 36px;
         line-height: 1.08;
       }
 
@@ -140,7 +141,7 @@
         max-width: 780px;
         margin: 10px 0 0;
         color: var(--muted);
-        font-size: 15px;
+        font-size: 17px;
         line-height: 1.6;
       }
 
@@ -168,7 +169,7 @@
 
       .metrics {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
         margin-bottom: 16px;
       }
@@ -211,14 +212,14 @@
         justify-content: space-between;
         gap: 14px;
         min-height: 58px;
-        padding: 15px 18px;
+        padding: 17px 20px;
         border-bottom: 1px solid var(--line);
       }
 
       .panel-head h2 {
         margin: 0;
         color: var(--ink);
-        font-size: 17px;
+        font-size: 19px;
         line-height: 1.2;
       }
 
@@ -235,22 +236,23 @@
 
       table {
         width: 100%;
-        min-width: 900px;
+        min-width: 1120px;
         border-collapse: collapse;
       }
 
       th,
       td {
-        padding: 13px 16px;
+        padding: 16px 18px;
         border-bottom: 1px solid var(--line);
         text-align: left;
         vertical-align: top;
+        font-size: 16px;
       }
 
       th {
         color: var(--muted);
         background: var(--surface-2);
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 850;
         text-transform: uppercase;
       }
@@ -261,12 +263,13 @@
 
       .task-title {
         color: var(--ink);
+        font-size: 17px;
         font-weight: 780;
       }
 
       .muted {
         color: var(--muted);
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.4;
       }
 
@@ -279,12 +282,12 @@
       .pill {
         display: inline-flex;
         align-items: center;
-        min-height: 24px;
-        padding: 0 9px;
+        min-height: 27px;
+        padding: 0 10px;
         border-radius: 8px;
         background: #eef7f0;
         color: var(--green);
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 800;
       }
 
@@ -297,6 +300,19 @@
         max-width: 280px;
         color: var(--text);
         line-height: 1.45;
+      }
+
+      .deadline {
+        color: var(--ink);
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .bonus {
+        color: var(--accent);
+        font-size: 18px;
+        font-weight: 900;
+        white-space: nowrap;
       }
 
       .empty,
@@ -341,7 +357,7 @@
         }
 
         h1 {
-          font-size: 28px;
+          font-size: 30px;
         }
 
         .hero {
@@ -387,11 +403,6 @@
           <div class="metric-label">Tracked Tasks</div>
           <div class="metric-value" id="task-count">-</div>
           <div class="metric-foot">20260529-1 to 20260529-20</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Most Applied</div>
-          <div class="metric-value" id="top-task">-</div>
-          <div class="metric-foot" id="top-task-foot">-</div>
         </div>
         <div class="metric">
           <div class="metric-label">No Applications</div>
@@ -460,6 +471,7 @@
                   <th>Task</th>
                   <th>Applications</th>
                   <th>Status</th>
+                  <th>Deadline</th>
                   <th>Current Teams</th>
                   <th>Bonus</th>
                   <th>Latest Applications</th>
@@ -477,12 +489,12 @@
                       <tr>
                         <td>
                           <a class="task-title" href="${esc(task.link)}" target="_blank" rel="noreferrer">${esc(task.id)} · ${esc(task.title)}</a>
-                          <div class="muted">Deadline ${esc(task.deadline)}</div>
                         </td>
                         <td><span class="count">${fmt.format(task.application_count)}</span></td>
                         <td><span class="pill ${task.status === "锁定" ? "locked" : ""}">${esc(task.status)}</span></td>
+                        <td><span class="deadline">${esc(task.deadline)}</span></td>
                         <td class="teams">${esc(task.assignees || "-")}</td>
-                        <td>${esc(task.bonus)}</td>
+                        <td><span class="bonus">${esc(task.bonus)}</span></td>
                         <td class="muted">${latest || "-"}</td>
                       </tr>
                     `;
@@ -498,7 +510,6 @@
         const data = await fetch("./data/cann_tasks.json").then((res) => res.json());
         const tasks = data.tasks || [];
         const totalApplications = tasks.reduce((sum, task) => sum + Number(task.application_count || 0), 0);
-        const topTask = tasks.slice().sort((a, b) => b.application_count - a.application_count)[0];
         const zeroCount = tasks.filter((task) => !task.application_count).length;
 
         text("page-title", data.discussion_title || "CANN Community Task Applications");
@@ -506,8 +517,6 @@
         text("total-applications", fmt.format(totalApplications));
         text("generated", `Updated ${formatTime(data.generated_at)}`);
         text("task-count", fmt.format(data.task_count || tasks.length));
-        text("top-task", topTask ? topTask.id : "-");
-        text("top-task-foot", topTask ? `${topTask.title} · ${fmt.format(topTask.application_count)} applications` : "-");
         text("zero-count", fmt.format(zeroCount));
         text("source-comments", fmt.format(data.comment_total || 0));
         text("filter-note", `${fmt.format(data.application_comment_count || 0)} matched application comments`);
