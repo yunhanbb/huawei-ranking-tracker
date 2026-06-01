@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T08:50:56+00:00",
+  "generated_at": "2026-06-01T08:55:12+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
@@ -7,7 +7,7 @@
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
   "comment_total": 335,
-  "application_comment_count": 37,
+  "application_comment_count": 38,
   "ignored_comment_count": 2,
   "tasks": [
     {
@@ -142,7 +142,7 @@
       "assignees": "看不到我",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 1,
+      "application_count": 2,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -153,6 +153,16 @@
           "gitcode_account": "LiJianhao2",
           "status": "报名",
           "link": "https://gitcode.com/LiJianhao2/ops-math_5296"
+        },
+        {
+          "comment_id": "579800abc9ca49c5adc043ee5b683f64",
+          "serial_number": 375,
+          "created_date": "2026-06-01T16:54:26+08:00",
+          "user_name": "boxw987",
+          "team": "boxw987",
+          "gitcode_account": "boxw987",
+          "status": "报名",
+          "link": "https://gitcode.com/boxw987/ops-math_5072"
         }
       ]
     },
