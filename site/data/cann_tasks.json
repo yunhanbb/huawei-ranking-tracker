@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-01T08:29:05+00:00",
+  "generated_at": "2026-06-01T08:35:19+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 335,
+  "comment_total": 334,
   "application_comment_count": 37,
   "ignored_comment_count": 2,
   "tasks": [
@@ -627,14 +627,14 @@
           "link": "https://gitcode.com/gcw_HFxe2py0/ops-nn"
         },
         {
-          "comment_id": "c940be1af2a94c64837582db5fffdc6a",
-          "serial_number": 373,
-          "created_date": "2026-06-01T16:25:45+08:00",
+          "comment_id": "bb3eb9bd796e436b94e85a2ce2eb88e0",
+          "serial_number": 374,
+          "created_date": "2026-06-01T16:34:49+08:00",
           "user_name": "forge001",
           "team": "forge",
           "gitcode_account": "forge001",
           "status": "报名",
-          "link": "https://gitcode.com/forge001/cann-ops-competitions"
+          "link": "https://gitcode.com/forge001/ops-nn"
         }
       ]
     }
