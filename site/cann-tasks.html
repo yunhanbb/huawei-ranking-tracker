@@ -8,9 +8,9 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f4f1ea;
+        --bg: #f6f7f8;
         --surface: #ffffff;
-        --surface-2: #faf8f3;
+        --surface-2: #f7f9fb;
         --ink: #17202a;
         --text: #273340;
         --muted: #687789;
@@ -30,7 +30,9 @@
       body {
         margin: 0;
         min-height: 100vh;
-        background: var(--bg);
+        background:
+          linear-gradient(180deg, #eef5f5 0, rgba(238, 245, 245, 0) 240px),
+          var(--bg);
         color: var(--text);
         font-size: 16px;
         font-family:
@@ -59,7 +61,7 @@
       .topbar {
         justify-content: space-between;
         gap: 18px;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
       }
 
       .brand {
@@ -73,7 +75,7 @@
         border-radius: 8px;
         display: grid;
         place-items: center;
-        background: var(--ink);
+        background: linear-gradient(135deg, var(--ink), #234d54);
         color: #fff;
         font-weight: 850;
         flex: 0 0 auto;
@@ -110,6 +112,7 @@
         color: var(--ink);
         font-size: 14px;
         font-weight: 700;
+        box-shadow: 0 1px 2px rgba(28, 38, 48, 0.04);
       }
 
       .hero,
@@ -125,8 +128,8 @@
         grid-template-columns: minmax(0, 1fr) auto;
         gap: 24px;
         align-items: end;
-        padding: 24px;
-        margin-bottom: 16px;
+        padding: 28px;
+        margin-bottom: 18px;
         box-shadow: var(--shadow);
       }
 
@@ -147,10 +150,11 @@
 
       .summary-tile {
         min-width: 190px;
-        padding: 18px;
+        padding: 20px;
         border: 1px solid #c3dfe2;
         border-radius: 8px;
         background: #e8f6f6;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
       }
 
       .summary-label {
@@ -175,8 +179,18 @@
       }
 
       .metric {
+        position: relative;
         min-height: 100px;
-        padding: 15px;
+        padding: 17px 18px 16px;
+        overflow: hidden;
+      }
+
+      .metric::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: var(--teal);
       }
 
       .metric-label {
@@ -204,6 +218,7 @@
 
       .panel {
         overflow: hidden;
+        box-shadow: 0 1px 3px rgba(28, 38, 48, 0.06);
       }
 
       .panel-head {
@@ -238,6 +253,7 @@
         width: 100%;
         min-width: 1120px;
         border-collapse: collapse;
+        table-layout: fixed;
       }
 
       th,
@@ -250,6 +266,9 @@
       }
 
       th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
         color: var(--muted);
         background: var(--surface-2);
         font-size: 13px;
@@ -257,14 +276,72 @@
         text-transform: uppercase;
       }
 
-      tbody tr:hover {
+      th:nth-child(1) {
+        width: 30%;
+      }
+
+      th:nth-child(2) {
+        width: 10%;
+      }
+
+      th:nth-child(3) {
+        width: 9%;
+      }
+
+      th:nth-child(4) {
+        width: 11%;
+      }
+
+      th:nth-child(5) {
+        width: 16%;
+      }
+
+      th:nth-child(6) {
+        width: 11%;
+      }
+
+      th:nth-child(7) {
+        width: 13%;
+      }
+
+      tbody tr:nth-child(even) {
         background: #fbfcfd;
+      }
+
+      tbody tr:hover {
+        background: #f2f8f8;
+      }
+
+      .task-cell {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .task-id {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        min-height: 28px;
+        padding: 0 9px;
+        border: 1px solid #d8e8ea;
+        border-radius: 8px;
+        background: #eef7f7;
+        color: var(--teal);
+        font-size: 13px;
+        font-weight: 900;
       }
 
       .task-title {
         color: var(--ink);
         font-size: 17px;
         font-weight: 780;
+        line-height: 1.35;
+      }
+
+      .task-title:hover {
+        color: var(--teal);
       }
 
       .muted {
@@ -275,7 +352,7 @@
 
       .count {
         color: var(--accent);
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 900;
       }
 
@@ -297,9 +374,9 @@
       }
 
       .teams {
-        max-width: 280px;
         color: var(--text);
         line-height: 1.45;
+        overflow-wrap: anywhere;
       }
 
       .deadline {
@@ -313,6 +390,12 @@
         font-size: 18px;
         font-weight: 900;
         white-space: nowrap;
+      }
+
+      .latest {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
       }
 
       .empty,
@@ -488,14 +571,17 @@
                     return `
                       <tr>
                         <td>
-                          <a class="task-title" href="${esc(task.link)}" target="_blank" rel="noreferrer">${esc(task.id)} · ${esc(task.title)}</a>
+                          <div class="task-cell">
+                            <span class="task-id">${esc(task.id)}</span>
+                            <a class="task-title" href="${esc(task.link)}" target="_blank" rel="noreferrer">${esc(task.title)}</a>
+                          </div>
                         </td>
                         <td><span class="count">${fmt.format(task.application_count)}</span></td>
                         <td><span class="pill ${task.status === "锁定" ? "locked" : ""}">${esc(task.status)}</span></td>
                         <td><span class="deadline">${esc(task.deadline)}</span></td>
                         <td class="teams">${esc(task.assignees || "-")}</td>
                         <td><span class="bonus">${esc(task.bonus)}</span></td>
-                        <td class="muted">${latest || "-"}</td>
+                        <td class="latest">${latest || "-"}</td>
                       </tr>
                     `;
                   })
