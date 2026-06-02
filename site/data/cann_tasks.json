@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-02T09:16:09+00:00",
+  "generated_at": "2026-06-02T14:15:17+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 348,
-  "application_comment_count": 50,
-  "ignored_comment_count": 2,
+  "comment_total": 355,
+  "application_comment_count": 56,
+  "ignored_comment_count": 3,
   "tasks": [
     {
       "id": "20260529-1",
@@ -62,7 +62,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -83,6 +83,16 @@
           "gitcode_account": "jingdemeng",
           "status": "报名",
           "link": "https://gitcode.com/jingdemeng/ops-blas.git"
+        },
+        {
+          "comment_id": "b8af479ecc894f25bba01985815e8277",
+          "serial_number": 395,
+          "created_date": "2026-06-02T20:01:28+08:00",
+          "user_name": "gcw_2sZfnYq9",
+          "team": "鱼",
+          "gitcode_account": "gcw_2sZfnYq9",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/cann-ops-competitions"
         }
       ]
     },
@@ -92,10 +102,10 @@
       "title": "SPMV 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/SPMV_task_doc.md",
       "status": "开放",
-      "assignees": "",
+      "assignees": "Mako",
       "bonus": "72430.5元",
       "deadline": "2026.07.30",
-      "application_count": 1,
+      "application_count": 2,
       "applications": [
         {
           "comment_id": "d82043a20278455ca231ff34b80e6ef4",
@@ -106,6 +116,16 @@
           "gitcode_account": "Tangefly",
           "status": "报名",
           "link": "https://gitcode.com/Tangefly/ops-sparse"
+        },
+        {
+          "comment_id": "b69fb20c917f40c6bff1a2d6bab3fe93",
+          "serial_number": 391,
+          "created_date": "2026-06-02T18:28:21+08:00",
+          "user_name": "zqm19511961081",
+          "team": "别测了没bug",
+          "gitcode_account": "zqm19511961081",
+          "status": "报名",
+          "link": "https://gitcode.com/zqm19511961081/ops-sparse"
         }
       ]
     },
@@ -141,8 +161,19 @@
       "assignees": "",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
-      "application_count": 0,
-      "applications": []
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "bc940b94749946a489618afd4253848a",
+          "serial_number": 397,
+          "created_date": "2026-06-02T21:07:10+08:00",
+          "user_name": "justin007hch",
+          "team": "禁我东皇重开",
+          "gitcode_account": "justin007hch",
+          "status": "报名",
+          "link": "https://gitcode.com/justin007hch/ops-math"
+        }
+      ]
     },
     {
       "id": "20260529-6",
@@ -153,7 +184,7 @@
       "assignees": "看不到我、boxw987",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -174,6 +205,16 @@
           "gitcode_account": "boxw987",
           "status": "报名",
           "link": "https://gitcode.com/boxw987/ops-math_5072"
+        },
+        {
+          "comment_id": "0146621e7511448aafe4421120b67192",
+          "serial_number": 396,
+          "created_date": "2026-06-02T20:15:00+08:00",
+          "user_name": "2302_79379917",
+          "team": "夏日幽灵",
+          "gitcode_account": "2302_79379917",
+          "status": "报名",
+          "link": "https://gitcode.com/2302_79379917/ops-math"
         }
       ]
     },
@@ -252,7 +293,7 @@
       "assignees": "今天要吃三碗饭、zzzzzed",
       "bonus": "40384.5元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "f3cd803d3a984012ac91ad25b13e2680",
@@ -273,6 +314,26 @@
           "gitcode_account": "weixin_57548770",
           "status": "报名",
           "link": "https://gitcode.com/weixin_57548770/ascendc_op.git"
+        },
+        {
+          "comment_id": "3c1383f897244903b4da1b1e776f9614",
+          "serial_number": 390,
+          "created_date": "2026-06-02T17:39:52+08:00",
+          "user_name": "jingkai-2026",
+          "team": "三寸人间",
+          "gitcode_account": "jingkai-2026",
+          "status": "报名",
+          "link": "https://gitcode.com/jingkai-2026/ops-math"
+        },
+        {
+          "comment_id": "b4206281cfae49ab96cbec106a577008",
+          "serial_number": 392,
+          "created_date": "2026-06-02T18:29:44+08:00",
+          "user_name": "maggie_Ha",
+          "team": "四小黑奴",
+          "gitcode_account": "maggie_Ha",
+          "status": "报名",
+          "link": "https://gitcode.com/maggie_Ha/ops-math"
         }
       ]
     },
@@ -324,8 +385,8 @@
       "number": 11,
       "title": "FmodTensor&FmodScalar 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/FmodScalar&FmodTensor_task_doc.md",
-      "status": "开放",
-      "assignees": "GGBond",
+      "status": "锁定",
+      "assignees": "GGBond、小苹果、番茄土豆",
       "bonus": "25015.5元",
       "deadline": "2026.06.30",
       "application_count": 4,
@@ -453,8 +514,8 @@
       "number": 14,
       "title": "UpsampleNearestExact1d&UpsampleNearestExact2d 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/UpsampleNearestExact1d&UpsampleNearestExact2d_task_doc.md",
-      "status": "开放",
-      "assignees": "小大",
+      "status": "锁定",
+      "assignees": "小大、HPC+AI、玩昇腾machine",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
       "application_count": 3,
@@ -602,8 +663,8 @@
       "number": 17,
       "title": "InplaceRsqrt 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/InplaceRsqrt_task_doc.md",
-      "status": "开放",
-      "assignees": "NoOne",
+      "status": "锁定",
+      "assignees": "NoOne、哒哒哒、野人部落2",
       "bonus": "17985元",
       "deadline": "2026.06.30",
       "application_count": 3,
