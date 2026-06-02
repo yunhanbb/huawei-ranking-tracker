@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-02T04:46:46+00:00",
+  "generated_at": "2026-06-02T09:16:09+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 343,
-  "application_comment_count": 45,
+  "comment_total": 348,
+  "application_comment_count": 50,
   "ignored_comment_count": 2,
   "tasks": [
     {
@@ -328,7 +328,7 @@
       "assignees": "GGBond",
       "bonus": "25015.5元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "2f6b42b941a14c52a805f804cbc1d084",
@@ -349,6 +349,26 @@
           "gitcode_account": "little_apple_12",
           "status": "报名",
           "link": "https://gitcode.com/little_apple_12/ops-math_11"
+        },
+        {
+          "comment_id": "f4d9fef07a3546598042e9f6bea2cf37",
+          "serial_number": 385,
+          "created_date": "2026-06-02T13:20:19+08:00",
+          "user_name": "potatohaha",
+          "team": "番茄土豆",
+          "gitcode_account": "potatohaha",
+          "status": "报名",
+          "link": "https://gitcode.com/potatohaha/ops-nn"
+        },
+        {
+          "comment_id": "3118e3ed3dd04928b2bf80fad607b5d7",
+          "serial_number": 389,
+          "created_date": "2026-06-02T17:11:28+08:00",
+          "user_name": "jingkai-2026",
+          "team": "三寸人间",
+          "gitcode_account": "jingkai-2026",
+          "status": "报名",
+          "link": "https://gitcode.com/jingkai-2026/ops-math"
         }
       ]
     },
@@ -437,7 +457,7 @@
       "assignees": "小大",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
-      "application_count": 1,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "3a650ec73a57417fa57212fad3ee0aef",
@@ -448,6 +468,26 @@
           "gitcode_account": "KaranocaVe",
           "status": "报名",
           "link": "https://gitcode.com/karanocave/ops-cv"
+        },
+        {
+          "comment_id": "139d4e8533884ce5b7abb22868a7fa05",
+          "serial_number": 386,
+          "created_date": "2026-06-02T14:50:12+08:00",
+          "user_name": "kxingaa",
+          "team": "HPC+AI",
+          "gitcode_account": "kxingaa",
+          "status": "报名",
+          "link": "https://gitcode.com/kxingaa/ops-cv"
+        },
+        {
+          "comment_id": "20dc421da2894615b192c461a3ca1c33",
+          "serial_number": 388,
+          "created_date": "2026-06-02T16:56:44+08:00",
+          "user_name": "bingfeng777",
+          "team": "玩昇腾machine",
+          "gitcode_account": "bingfeng777",
+          "status": "报名",
+          "link": "https://gitcode.com/bingfeng777/ops-cv"
         }
       ]
     },
@@ -566,7 +606,7 @@
       "assignees": "NoOne",
       "bonus": "17985元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "04abc1fc65ea4e40b17862d90f09e59b",
@@ -587,6 +627,16 @@
           "gitcode_account": "waaiiweis",
           "status": "报名",
           "link": "https://gitcode.com/waaiiweis/ir.git"
+        },
+        {
+          "comment_id": "bc33a3bccec042fe9b3ea06cdffc3e5a",
+          "serial_number": 387,
+          "created_date": "2026-06-02T15:11:29+08:00",
+          "user_name": "m0_64162640",
+          "team": "野人部落2",
+          "gitcode_account": "m0_64162640",
+          "status": "报名",
+          "link": "https://gitcode.com/m0_64162640/ops-math"
         }
       ]
     },
