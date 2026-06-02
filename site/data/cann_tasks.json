@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-01T23:08:15+00:00",
+  "generated_at": "2026-06-02T04:46:46+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 340,
-  "application_comment_count": 42,
+  "comment_total": 343,
+  "application_comment_count": 45,
   "ignored_comment_count": 2,
   "tasks": [
     {
@@ -95,8 +95,19 @@
       "assignees": "",
       "bonus": "72430.5元",
       "deadline": "2026.07.30",
-      "application_count": 0,
-      "applications": []
+      "application_count": 1,
+      "applications": [
+        {
+          "comment_id": "d82043a20278455ca231ff34b80e6ef4",
+          "serial_number": 383,
+          "created_date": "2026-06-02T10:59:40+08:00",
+          "user_name": "Tangefly",
+          "team": "Mako",
+          "gitcode_account": "Tangefly",
+          "status": "报名",
+          "link": "https://gitcode.com/Tangefly/ops-sparse"
+        }
+      ]
     },
     {
       "id": "20260529-4",
@@ -139,7 +150,7 @@
       "title": "MinDim&MaxDim 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/MinDim&MaxDim_task_doc.md",
       "status": "开放",
-      "assignees": "看不到我",
+      "assignees": "看不到我、boxw987",
       "bonus": "58860元",
       "deadline": "2026.06.30",
       "application_count": 2,
@@ -172,7 +183,7 @@
       "title": "SyncBatchNormGatherStats 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/SyncBatchNormGatherStats_task_doc.md",
       "status": "开放",
-      "assignees": "",
+      "assignees": "hustding",
       "bonus": "57715.5元",
       "deadline": "2026.06.30",
       "application_count": 2,
@@ -238,7 +249,7 @@
       "title": "Bincount 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/bincount_task_doc.md",
       "status": "开放",
-      "assignees": "今天要吃三碗饭",
+      "assignees": "今天要吃三碗饭、zzzzzed",
       "bonus": "40384.5元",
       "deadline": "2026.06.30",
       "application_count": 2,
@@ -317,7 +328,7 @@
       "assignees": "GGBond",
       "bonus": "25015.5元",
       "deadline": "2026.06.30",
-      "application_count": 1,
+      "application_count": 2,
       "applications": [
         {
           "comment_id": "2f6b42b941a14c52a805f804cbc1d084",
@@ -328,6 +339,16 @@
           "gitcode_account": "szdaniel",
           "status": "报名",
           "link": "https://gitcode.com/szdaniel/ops-math"
+        },
+        {
+          "comment_id": "538ddc6708cb4f04ba54374e6719cb71",
+          "serial_number": 382,
+          "created_date": "2026-06-02T10:23:53+08:00",
+          "user_name": "little_apple_12",
+          "team": "小苹果",
+          "gitcode_account": "little_apple_12",
+          "status": "报名",
+          "link": "https://gitcode.com/little_apple_12/ops-math_11"
         }
       ]
     },
@@ -337,7 +358,7 @@
       "title": "UpsampleNearest3d 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/UpsampleNearest3d_task_doc.md",
       "status": "开放",
-      "assignees": "珞珈山猫猫虫",
+      "assignees": "珞珈山猫猫虫、ttttry",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
       "application_count": 2,
@@ -435,8 +456,8 @@
       "number": 15,
       "title": "Arange 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Arange_task_doc.md",
-      "status": "开放",
-      "assignees": "蓝的盆、infinity",
+      "status": "锁定",
+      "assignees": "蓝的盆、infinity】、forge",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
       "application_count": 5,
@@ -545,7 +566,7 @@
       "assignees": "NoOne",
       "bonus": "17985元",
       "deadline": "2026.06.30",
-      "application_count": 1,
+      "application_count": 2,
       "applications": [
         {
           "comment_id": "04abc1fc65ea4e40b17862d90f09e59b",
@@ -556,6 +577,16 @@
           "gitcode_account": "Nice_try",
           "status": "报名",
           "link": "https://gitcode.com/Nice_try/ops-math"
+        },
+        {
+          "comment_id": "870b119ed8c44d5cbf688443b5f6cf92",
+          "serial_number": 384,
+          "created_date": "2026-06-02T12:13:30+08:00",
+          "user_name": "waaiiweis",
+          "team": "哒哒哒",
+          "gitcode_account": "waaiiweis",
+          "status": "报名",
+          "link": "https://gitcode.com/waaiiweis/ir.git"
         }
       ]
     },
@@ -650,8 +681,8 @@
       "number": 20,
       "title": "IndexFillTensor 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/IndexFillTensor_task_doc.md",
-      "status": "开放",
-      "assignees": "Aeolion、看看",
+      "status": "锁定",
+      "assignees": "Aeolion、看看、sleepy",
       "bonus": "16840.5元",
       "deadline": "2026.06.30",
       "application_count": 3,
