@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-02T14:15:17+00:00",
+  "generated_at": "2026-06-02T18:48:36+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 355,
-  "application_comment_count": 56,
+  "comment_total": 363,
+  "application_comment_count": 64,
   "ignored_comment_count": 3,
   "tasks": [
     {
@@ -62,7 +62,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -93,6 +93,16 @@
           "gitcode_account": "gcw_2sZfnYq9",
           "status": "报名",
           "link": "https://gitcode.com/cann/cann-ops-competitions"
+        },
+        {
+          "comment_id": "768f3805a7974a34935272f75a8de646",
+          "serial_number": 399,
+          "created_date": "2026-06-02T22:42:38+08:00",
+          "user_name": "lqq12345677",
+          "team": "努力学习",
+          "gitcode_account": "@lqq12345677",
+          "status": "报名",
+          "link": "https://gitcode.com/lqq12345677/ops-math_8712"
         }
       ]
     },
@@ -105,7 +115,7 @@
       "assignees": "Mako",
       "bonus": "72430.5元",
       "deadline": "2026.07.30",
-      "application_count": 2,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "d82043a20278455ca231ff34b80e6ef4",
@@ -126,6 +136,26 @@
           "gitcode_account": "zqm19511961081",
           "status": "报名",
           "link": "https://gitcode.com/zqm19511961081/ops-sparse"
+        },
+        {
+          "comment_id": "d773e0cb4af1413a97f6bbbbafdce5a6",
+          "serial_number": 400,
+          "created_date": "2026-06-02T23:48:00+08:00",
+          "user_name": "qq_44161734",
+          "team": "520",
+          "gitcode_account": "@qq_44161734",
+          "status": "报名",
+          "link": "https://gitcode.com/qq_44161734/ops-sparse"
+        },
+        {
+          "comment_id": "7204811b4ad942daafbcbeded7c55417",
+          "serial_number": 405,
+          "created_date": "2026-06-03T01:43:48+08:00",
+          "user_name": "chenjiayan2025",
+          "team": "Dryoung",
+          "gitcode_account": "chenjiayan2025",
+          "status": "报名",
+          "link": "https://gitcode.com/chenjiayan2025/ops-sparse_4980"
         }
       ]
     },
@@ -161,7 +191,7 @@
       "assignees": "",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
-      "application_count": 1,
+      "application_count": 2,
       "applications": [
         {
           "comment_id": "bc940b94749946a489618afd4253848a",
@@ -172,6 +202,16 @@
           "gitcode_account": "justin007hch",
           "status": "报名",
           "link": "https://gitcode.com/justin007hch/ops-math"
+        },
+        {
+          "comment_id": "be2df758606643318e7c444758542f53",
+          "serial_number": 404,
+          "created_date": "2026-06-03T00:25:20+08:00",
+          "user_name": "capta",
+          "team": "亩积吖",
+          "gitcode_account": "capta",
+          "status": "报名",
+          "link": "https://gitcode.com/capta/ops-math"
         }
       ]
     },
@@ -184,7 +224,7 @@
       "assignees": "看不到我、boxw987",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -215,6 +255,16 @@
           "gitcode_account": "2302_79379917",
           "status": "报名",
           "link": "https://gitcode.com/2302_79379917/ops-math"
+        },
+        {
+          "comment_id": "30ff64098b584f8098af0dedf0aa3c0d",
+          "serial_number": 403,
+          "created_date": "2026-06-03T00:14:28+08:00",
+          "user_name": "gca_u2301_77405109",
+          "team": "呀咩爹",
+          "gitcode_account": "gca_u2301_77405109",
+          "status": "报名",
+          "link": "https://gitcode.com/gca_u2301_77405109/ops-math"
         }
       ]
     },
@@ -227,7 +277,7 @@
       "assignees": "hustding",
       "bonus": "57715.5元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "e1896bc903ff4b8bbcb8183c22db65e4",
@@ -248,6 +298,16 @@
           "gitcode_account": "hustding",
           "status": "报名",
           "link": "https://gitcode.com/hustding/ops-nn"
+        },
+        {
+          "comment_id": "4cd14d09115e40b7a50c58352a7f5e60",
+          "serial_number": 398,
+          "created_date": "2026-06-02T22:17:58+08:00",
+          "user_name": "xchencehn",
+          "team": "干炒牛河",
+          "gitcode_account": "xchencehn",
+          "status": "报名",
+          "link": "https://gitcode.com/xchencehn/ops-math"
         }
       ]
     },
@@ -260,7 +320,7 @@
       "assignees": "跑刀的鼠鼠、keke",
       "bonus": "50194.5元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "a8d4de62a427417c8dc0969d09c43344",
@@ -281,6 +341,16 @@
           "gitcode_account": "kekooooooo",
           "status": "报名",
           "link": "https://gitcode.com/kekooooooo/ops-math"
+        },
+        {
+          "comment_id": "cc8ca59197fc4bf0b00a9f0143f725c7",
+          "serial_number": 402,
+          "created_date": "2026-06-03T00:12:12+08:00",
+          "user_name": "Xavier_Qiu",
+          "team": "阳焰波澄",
+          "gitcode_account": "Xavier_Qiu",
+          "status": "报名",
+          "link": "https://gitcode.com/Xavier_Qiu/ops-math"
         }
       ]
     },
@@ -293,7 +363,7 @@
       "assignees": "今天要吃三碗饭、zzzzzed",
       "bonus": "40384.5元",
       "deadline": "2026.06.30",
-      "application_count": 4,
+      "application_count": 5,
       "applications": [
         {
           "comment_id": "f3cd803d3a984012ac91ad25b13e2680",
@@ -334,6 +404,16 @@
           "gitcode_account": "maggie_Ha",
           "status": "报名",
           "link": "https://gitcode.com/maggie_Ha/ops-math"
+        },
+        {
+          "comment_id": "5178701f2f8e495e9d70ab88ec204578",
+          "serial_number": 401,
+          "created_date": "2026-06-03T00:10:06+08:00",
+          "user_name": "he_doctor",
+          "team": "阿勒勒",
+          "gitcode_account": "he_doctor",
+          "status": "报名",
+          "link": "https://gitcode.com/he_doctor/ops-math"
         }
       ]
     },
