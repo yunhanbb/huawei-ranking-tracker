@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-02T18:48:36+00:00",
+  "generated_at": "2026-06-02T21:55:06+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 363,
-  "application_comment_count": 64,
+  "comment_total": 364,
+  "application_comment_count": 65,
   "ignored_comment_count": 3,
   "tasks": [
     {
@@ -191,7 +191,7 @@
       "assignees": "",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
-      "application_count": 2,
+      "application_count": 3,
       "applications": [
         {
           "comment_id": "bc940b94749946a489618afd4253848a",
@@ -212,6 +212,16 @@
           "gitcode_account": "capta",
           "status": "报名",
           "link": "https://gitcode.com/capta/ops-math"
+        },
+        {
+          "comment_id": "94d1383af17b44499ffbca4dbc701ad2",
+          "serial_number": 406,
+          "created_date": "2026-06-03T03:22:55+08:00",
+          "user_name": "chenjiayan2025",
+          "team": "Dryoung",
+          "gitcode_account": "chenjiayan2025",
+          "status": "报名",
+          "link": "https://gitcode.com/chenjiayan2025/ops-transformer"
         }
       ]
     },
