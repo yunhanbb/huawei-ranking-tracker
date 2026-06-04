@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-04T08:56:20+00:00",
+  "generated_at": "2026-06-04T12:08:56+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 395,
-  "application_comment_count": 85,
+  "comment_total": 398,
+  "application_comment_count": 88,
   "ignored_comment_count": 14,
   "tasks": [
     {
@@ -613,10 +613,10 @@
       "title": "RightShift算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/RightShift_task_doc.md",
       "status": "锁定",
-      "assignees": "曼波、不知名队、酋长部落",
+      "assignees": "曼波、四小黑奴、酋长部落",
       "bonus": "29430元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "6199d34226214535b6d4f3feae241dfe",
@@ -647,6 +647,16 @@
           "gitcode_account": "m0_64162640",
           "status": "报名",
           "link": "https://gitcode.com/m0_64162640/ops-math"
+        },
+        {
+          "comment_id": "749f08969a01499d900156628e26224f",
+          "serial_number": 441,
+          "created_date": "2026-06-04T17:44:40+08:00",
+          "user_name": "maggie_Ha",
+          "team": "四小黑奴",
+          "gitcode_account": "maggie_Ha",
+          "status": "报名",
+          "link": "https://gitcode.com/maggie_Ha/ops-math"
         }
       ]
     },
@@ -904,7 +914,7 @@
       "assignees": "yc小分队、yangb、yutian",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 5,
       "applications": [
         {
           "comment_id": "902ed7ea6cb34521a6f28ba46ff8915b",
@@ -935,6 +945,26 @@
           "gitcode_account": "yutianp",
           "status": "报名",
           "link": "https://gitcode.com/yutianp/ops-nn"
+        },
+        {
+          "comment_id": "979e724e79e74ea5a1d54ad670c005ea",
+          "serial_number": 442,
+          "created_date": "2026-06-04T17:45:34+08:00",
+          "user_name": "Zyx6794",
+          "team": "DM",
+          "gitcode_account": "Zyx6794",
+          "status": "报名",
+          "link": "https://gitcode.com/Zyx6794/GCD"
+        },
+        {
+          "comment_id": "1f77a20abad344a99ae57c3095751140",
+          "serial_number": 443,
+          "created_date": "2026-06-04T19:06:04+08:00",
+          "user_name": "dahfgakf",
+          "team": "wzy-ikunvv",
+          "gitcode_account": "dahfgakf",
+          "status": "报名",
+          "link": "https://gitcode.com/dahfgakf/ops-math"
         }
       ]
     },
