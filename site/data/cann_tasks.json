@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-04T04:49:49+00:00",
+  "generated_at": "2026-06-04T08:56:20+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 389,
-  "application_comment_count": 81,
-  "ignored_comment_count": 12,
+  "comment_total": 395,
+  "application_comment_count": 85,
+  "ignored_comment_count": 14,
   "tasks": [
     {
       "id": "20260529-1",
@@ -344,7 +344,7 @@
       "assignees": "看不到我、boxw987、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 4,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -385,6 +385,36 @@
           "gitcode_account": "gca_u2301_77405109",
           "status": "报名",
           "link": "https://gitcode.com/gca_u2301_77405109/ops-math"
+        },
+        {
+          "comment_id": "d449d438860947a9aa512d0e2ef8c505",
+          "serial_number": 433,
+          "created_date": "2026-06-04T13:51:48+08:00",
+          "user_name": "sunshine00",
+          "team": "这波运气不好",
+          "gitcode_account": "sunshine00",
+          "status": "报名",
+          "link": "https://gitcode.com/sunshine00/cann-ops-competitions"
+        },
+        {
+          "comment_id": "7fadbb851e614aca87516e60d92e1731",
+          "serial_number": 434,
+          "created_date": "2026-06-04T14:12:00+08:00",
+          "user_name": "LiJianhao2",
+          "team": "看不到我",
+          "gitcode_account": "LiJianhao2",
+          "status": "报名",
+          "link": "https://gitcode.com/LiJianhao2/ops-math_5296"
+        },
+        {
+          "comment_id": "7737f282ede2415d8769c397039ca00e",
+          "serial_number": 435,
+          "created_date": "2026-06-04T14:31:58+08:00",
+          "user_name": "fasdfaefsd",
+          "team": "不知名队",
+          "gitcode_account": "fasdfaefsd",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-nn"
         }
       ]
     },
@@ -960,7 +990,7 @@
       "assignees": "披荆斩棘、xy cheng、野人部落",
       "bonus": "17494.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "bd0007f11486421c84c1180027de25d0",
@@ -991,6 +1021,16 @@
           "gitcode_account": "zyznn111111",
           "status": "报名",
           "link": "https://gitcode.com/zyznn111111/ops-nn"
+        },
+        {
+          "comment_id": "177db3143917425396e8111b5afd01bb",
+          "serial_number": 439,
+          "created_date": "2026-06-04T16:03:11+08:00",
+          "user_name": "yu-fachen",
+          "team": "量智之星",
+          "gitcode_account": "yu-fachen",
+          "status": "报名",
+          "link": "https://gitcode.com/quantum-intelligence/ops-nn.git"
         }
       ]
     },
