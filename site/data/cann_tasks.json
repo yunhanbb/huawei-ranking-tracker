@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-05T04:24:28+00:00",
+  "generated_at": "2026-06-05T08:49:42+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 403,
-  "application_comment_count": 91,
-  "ignored_comment_count": 16,
+  "comment_total": 410,
+  "application_comment_count": 96,
+  "ignored_comment_count": 18,
   "tasks": [
     {
       "id": "20260529-1",
@@ -351,10 +351,10 @@
       "title": "MinDim&MaxDim 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/MinDim&MaxDim_task_doc.md",
       "status": "锁定",
-      "assignees": "看不到我、boxw987、夏日幽灵",
+      "assignees": "HIT-AI、boxw987、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 8,
+      "application_count": 9,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -435,6 +435,16 @@
           "gitcode_account": "yhao-zhang",
           "status": "报名",
           "link": "https://gitcode.com/yhao-zhang/ops-math"
+        },
+        {
+          "comment_id": "94170a7dce3343eda6a50cb28bcc1fa1",
+          "serial_number": 458,
+          "created_date": "2026-06-05T16:44:33+08:00",
+          "user_name": "mpmswj",
+          "team": "搞了再说",
+          "gitcode_account": "mpmswj",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
         }
       ]
     },
@@ -742,7 +752,7 @@
       "assignees": "珞珈山猫猫虫、ttttry、努力学习",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "fc54e846b9bc47519f43aa907a1ae00f",
@@ -773,6 +783,16 @@
           "gitcode_account": "@lqq12345677",
           "status": "报名",
           "link": "https://gitcode.com/lqq12345677/ops-math_8712"
+        },
+        {
+          "comment_id": "9034a23145bb45da8ce4977f28afb250",
+          "serial_number": 452,
+          "created_date": "2026-06-05T15:10:20+08:00",
+          "user_name": "mpmswj",
+          "team": "搞了再说",
+          "gitcode_account": "mpmswj",
+          "status": "报名",
+          "link": "https://gitcode.com/HyosungSink/ops-cv"
         }
       ]
     },
@@ -782,10 +802,10 @@
       "title": "Logspace 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/logspace_task_doc.md",
       "status": "锁定",
-      "assignees": "linux012、菜鸟、菜鸡",
+      "assignees": "linux012、菜鸟、再来试试",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
-      "application_count": 4,
+      "application_count": 6,
       "applications": [
         {
           "comment_id": "08ed45d6b4854ee190dcb3b5b9ccb81c",
@@ -826,6 +846,26 @@
           "gitcode_account": "L6662004",
           "status": "报名",
           "link": "https://gitcode.com/L6662004/1"
+        },
+        {
+          "comment_id": "962d1f3039a941508ffa36409f0bf431",
+          "serial_number": 455,
+          "created_date": "2026-06-05T15:43:15+08:00",
+          "user_name": "lunhao2023",
+          "team": "",
+          "gitcode_account": "lunhao2023",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "6f0a441b564f4473ac881f25a151a689",
+          "serial_number": 456,
+          "created_date": "2026-06-05T16:34:20+08:00",
+          "user_name": "LiJianhao2",
+          "team": "看不到我",
+          "gitcode_account": "LiJianhao2",
+          "status": "报名",
+          "link": "https://gitcode.com/LiJianhao2/ops-math_5296"
         }
       ]
     },
@@ -878,10 +918,10 @@
       "title": "Arange 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Arange_task_doc.md",
       "status": "锁定",
-      "assignees": "蓝的盆、infinity、forge",
+      "assignees": "蓝的盆、冲冲冲、forge",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
-      "application_count": 5,
+      "application_count": 6,
       "applications": [
         {
           "comment_id": "8d3d30472cab48eab1ebae1e07583ce7",
@@ -932,6 +972,16 @@
           "gitcode_account": "forge001",
           "status": "报名",
           "link": "https://gitcode.com/forge001/cann-ops-competitions"
+        },
+        {
+          "comment_id": "faa34c307fb741cbbdc95e7cec2811dd",
+          "serial_number": 454,
+          "created_date": "2026-06-05T15:23:22+08:00",
+          "user_name": "wanghaha1204",
+          "team": "冲冲冲",
+          "gitcode_account": "wanghaha1204",
+          "status": "报名",
+          "link": "https://gitcode.com/wanghaha1204/ops-math"
         }
       ]
     },
