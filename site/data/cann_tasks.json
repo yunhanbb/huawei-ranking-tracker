@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-05T12:16:25+00:00",
+  "generated_at": "2026-06-05T16:06:53+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 414,
-  "application_comment_count": 99,
-  "ignored_comment_count": 19,
+  "comment_total": 417,
+  "application_comment_count": 101,
+  "ignored_comment_count": 20,
   "tasks": [
     {
       "id": "20260529-1",
@@ -1183,7 +1183,7 @@
       "assignees": "卡拉米、GoOn、量智之星",
       "bonus": "17494.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "6b9ac63df9af453f88627a8b4f2f5a4f",
@@ -1214,6 +1214,16 @@
           "gitcode_account": "shoe6maker",
           "status": "报名",
           "link": "https://gitcode.com/shoe6maker/ops-nn"
+        },
+        {
+          "comment_id": "6d49ba62a43344a4b8be9ab7013d848f",
+          "serial_number": 463,
+          "created_date": "2026-06-05T20:23:47+08:00",
+          "user_name": "yu-fachen",
+          "team": "量智之星",
+          "gitcode_account": "yu-fachen",
+          "status": "报名",
+          "link": "https://gitcode.com/quantum-intelligence/ops-nn.git"
         }
       ]
     },
@@ -1226,7 +1236,7 @@
       "assignees": "Aeolion、看看、sleepy",
       "bonus": "16840.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "9ae41ef3758d491ea85003d79f07b23a",
@@ -1257,6 +1267,16 @@
           "gitcode_account": "yogstar",
           "status": "报名",
           "link": "https://gitcode.com/yogstar/ops-nn.git"
+        },
+        {
+          "comment_id": "0d070552dbe74b4885e87e563941dc76",
+          "serial_number": 465,
+          "created_date": "2026-06-05T23:01:55+08:00",
+          "user_name": "qq_64917614",
+          "team": "胜天半子",
+          "gitcode_account": "@qq_64917614",
+          "status": "报名",
+          "link": "https://gitcode.com/qq_64917614/ops-nn"
         }
       ]
     }
