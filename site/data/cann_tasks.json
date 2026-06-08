@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-08T00:17:51+00:00",
+  "generated_at": "2026-06-08T05:59:06+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 423,
-  "application_comment_count": 101,
+  "comment_total": 425,
+  "application_comment_count": 103,
   "ignored_comment_count": 26,
   "tasks": [
     {
@@ -931,7 +931,7 @@
       "assignees": "蓝的盆、冲冲冲、forge",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
-      "application_count": 6,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "8d3d30472cab48eab1ebae1e07583ce7",
@@ -992,6 +992,16 @@
           "gitcode_account": "wanghaha1204",
           "status": "报名",
           "link": "https://gitcode.com/wanghaha1204/ops-math"
+        },
+        {
+          "comment_id": "928981c66f6e475e9b3535535cba2db2",
+          "serial_number": 473,
+          "created_date": "2026-06-08T11:52:31+08:00",
+          "user_name": "xxxlzdragon",
+          "team": "xxxlzl",
+          "gitcode_account": "@xxxladragon",
+          "status": "报名",
+          "link": "https://gitcode.com/xxxlzdragon/cann-ops-competitions"
         }
       ]
     },
@@ -1183,7 +1193,7 @@
       "assignees": "卡拉米、GoOn、量智之星",
       "bonus": "17494.5元",
       "deadline": "2026.06.30",
-      "application_count": 4,
+      "application_count": 5,
       "applications": [
         {
           "comment_id": "6b9ac63df9af453f88627a8b4f2f5a4f",
@@ -1224,6 +1234,16 @@
           "gitcode_account": "yu-fachen",
           "status": "报名",
           "link": "https://gitcode.com/quantum-intelligence/ops-nn.git"
+        },
+        {
+          "comment_id": "0fce3f6c7eaa4f6d95e10d5da7731970",
+          "serial_number": 472,
+          "created_date": "2026-06-08T11:20:30+08:00",
+          "user_name": "2201_76057135",
+          "team": "hh",
+          "gitcode_account": "@2201_76057135",
+          "status": "报名",
+          "link": "https://gitcode.com/2201_76057135/ops-nn-tiling2"
         }
       ]
     },
