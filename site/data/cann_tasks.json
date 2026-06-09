@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-09T08:36:49+00:00",
+  "generated_at": "2026-06-09T12:12:06+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 431,
-  "application_comment_count": 106,
-  "ignored_comment_count": 29,
+  "comment_total": 433,
+  "application_comment_count": 107,
+  "ignored_comment_count": 30,
   "tasks": [
     {
       "id": "20260529-1",
@@ -726,10 +726,10 @@
       "title": "FmodTensor&FmodScalar 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/FmodScalar&FmodTensor_task_doc.md",
       "status": "锁定",
-      "assignees": "GGBond、小苹果、番茄土豆",
+      "assignees": "GGBond、小苹果、Aeolion",
       "bonus": "25015.5元",
       "deadline": "2026.06.30",
-      "application_count": 4,
+      "application_count": 5,
       "applications": [
         {
           "comment_id": "2f6b42b941a14c52a805f804cbc1d084",
@@ -770,6 +770,16 @@
           "gitcode_account": "jingkai-2026",
           "status": "报名",
           "link": "https://gitcode.com/jingkai-2026/ops-math"
+        },
+        {
+          "comment_id": "c24bd110948248d8984693c74fac4a0e",
+          "serial_number": 482,
+          "created_date": "2026-06-09T19:09:06+08:00",
+          "user_name": "Admin05210",
+          "team": "Aeolion",
+          "gitcode_account": "Admin05210",
+          "status": "报名",
+          "link": "https://gitcode.com/Admin05210/ops-math"
         }
       ]
     },
