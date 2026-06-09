@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-08T23:19:22+00:00",
+  "generated_at": "2026-06-09T04:10:46+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 425,
-  "application_comment_count": 103,
-  "ignored_comment_count": 26,
+  "comment_total": 429,
+  "application_comment_count": 106,
+  "ignored_comment_count": 27,
   "tasks": [
     {
       "id": "20260529-1",
@@ -19,7 +19,7 @@
       "assignees": "hack_ai、willooo、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -50,6 +50,16 @@
           "gitcode_account": "zzkuner",
           "status": "报名",
           "link": "https://gitcode.com/zzkuner/ops-solve"
+        },
+        {
+          "comment_id": "4b73c22dc9a847f1869a36dc9418762c",
+          "serial_number": 477,
+          "created_date": "2026-06-09T11:24:09+08:00",
+          "user_name": "dahfgakf",
+          "team": "",
+          "gitcode_account": "dahfgakf",
+          "status": "报名",
+          "link": "https://gitcode.com/dahfgakf/ops-math"
         }
       ]
     },
@@ -573,7 +583,7 @@
       "assignees": "今天要吃三碗饭、ddplys、三寸人间",
       "bonus": "40384.5元",
       "deadline": "2026.06.30",
-      "application_count": 6,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "f3cd803d3a984012ac91ad25b13e2680",
@@ -634,6 +644,16 @@
           "gitcode_account": "ddplys",
           "status": "报名",
           "link": "https://gitcode.com/ddplys/bincount"
+        },
+        {
+          "comment_id": "9cec7427f93142d09f1855debc7f41d1",
+          "serial_number": 478,
+          "created_date": "2026-06-09T11:27:41+08:00",
+          "user_name": "mpmswj",
+          "team": "搞了再说",
+          "gitcode_account": "mpmswj",
+          "status": "报名",
+          "link": "https://gitcode.com/cann/ops-math"
         }
       ]
     },
@@ -1014,7 +1034,7 @@
       "assignees": "yc小分队、yangb、yutian",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
-      "application_count": 6,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "902ed7ea6cb34521a6f28ba46ff8915b",
@@ -1075,6 +1095,16 @@
           "gitcode_account": "Zyx6794",
           "status": "报名",
           "link": "https://gitcode.com/Zyx6794/GCD"
+        },
+        {
+          "comment_id": "7bbc21e897194de1a3617bc459740144",
+          "serial_number": 475,
+          "created_date": "2026-06-09T10:33:24+08:00",
+          "user_name": "JaneConan",
+          "team": "天辰天辰",
+          "gitcode_account": "JaneConan",
+          "status": "报名",
+          "link": "https://gitcode.com/JaneConan/ops-nn"
         }
       ]
     },
@@ -1253,7 +1283,7 @@
       "title": "IndexFillTensor 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/IndexFillTensor_task_doc.md",
       "status": "锁定",
-      "assignees": "sleepy",
+      "assignees": "sleepy、Aeolion、看看",
       "bonus": "16840.5元",
       "deadline": "2026.06.30",
       "application_count": 4,
