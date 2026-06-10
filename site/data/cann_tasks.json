@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-10T12:31:05+00:00",
+  "generated_at": "2026-06-10T16:41:30+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 438,
-  "application_comment_count": 109,
+  "comment_total": 441,
+  "application_comment_count": 112,
   "ignored_comment_count": 33,
   "tasks": [
     {
@@ -218,7 +218,7 @@
       "assignees": "昇腾推理越极限团队、算子开发学习",
       "bonus": "69651元",
       "deadline": "2026.07.30",
-      "application_count": 4,
+      "application_count": 6,
       "applications": [
         {
           "comment_id": "504a6bedc50c4c51add5d555a5a12111",
@@ -259,6 +259,26 @@
           "gitcode_account": "yhao-zhang",
           "status": "报名",
           "link": "https://gitcode.com/yhao-zhang/ops-math"
+        },
+        {
+          "comment_id": "dd727982115b47c1a2e5f3ed892fbdd8",
+          "serial_number": 486,
+          "created_date": "2026-06-10T17:27:26+08:00",
+          "user_name": "CyndiZ",
+          "team": "曼波",
+          "gitcode_account": "CyndiZ",
+          "status": "报名",
+          "link": "https://gitcode.com/CyndiZ/ops-nn, https://gitcode.com/CyndiZ/ops-transformer"
+        },
+        {
+          "comment_id": "a71c82d6cccf4604b9108d5bda3a1ee8",
+          "serial_number": 489,
+          "created_date": "2026-06-10T23:34:30+08:00",
+          "user_name": "qq_34974224",
+          "team": "qq_34974224",
+          "gitcode_account": "qq_34974224",
+          "status": "报名",
+          "link": "https://gitcode.com/qq_34974224/ops-math"
         }
       ]
     },
@@ -271,7 +291,7 @@
       "assignees": "Dryoung、edconeone",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
-      "application_count": 8,
+      "application_count": 9,
       "applications": [
         {
           "comment_id": "bc940b94749946a489618afd4253848a",
@@ -352,6 +372,16 @@
           "gitcode_account": "mpmswj",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-collections"
+        },
+        {
+          "comment_id": "6b1f7a850f634ef7a5d0cb256d08a9d3",
+          "serial_number": 490,
+          "created_date": "2026-06-10T23:37:00+08:00",
+          "user_name": "weixin_67485438",
+          "team": "zz",
+          "gitcode_account": "qq_34974224",
+          "status": "报名",
+          "link": "https://gitcode.com/weixin_67485438/ops-math"
         }
       ]
     },
@@ -364,7 +394,7 @@
       "assignees": "HIT-AI、boxw987、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 10,
+      "application_count": 9,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -455,16 +485,6 @@
           "gitcode_account": "mpmswj",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-math"
-        },
-        {
-          "comment_id": "dd727982115b47c1a2e5f3ed892fbdd8",
-          "serial_number": 486,
-          "created_date": "2026-06-10T17:27:26+08:00",
-          "user_name": "CyndiZ",
-          "team": "曼波",
-          "gitcode_account": "CyndiZ",
-          "status": "报名",
-          "link": "https://gitcode.com/CyndiZ/ops-math"
         }
       ]
     },
@@ -928,7 +948,7 @@
       "assignees": "小大、HPC+AI",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "3a650ec73a57417fa57212fad3ee0aef",
@@ -959,6 +979,16 @@
           "gitcode_account": "bingfeng777",
           "status": "报名",
           "link": "https://gitcode.com/bingfeng777/ops-cv"
+        },
+        {
+          "comment_id": "9632cc35780447759e4f9e0608090047",
+          "serial_number": 491,
+          "created_date": "2026-06-10T23:45:17+08:00",
+          "user_name": "simple02",
+          "team": "tianfuluo",
+          "gitcode_account": "simple02",
+          "status": "报名",
+          "link": "https://gitcode.com/simple02/ops-math"
         }
       ]
     },
@@ -1170,14 +1200,14 @@
           "link": "https://gitcode.com/m0_64162640/ops-math"
         },
         {
-          "comment_id": "4d011318267845bbb013847d39c59142",
-          "serial_number": 487,
-          "created_date": "2026-06-10T19:28:08+08:00",
-          "user_name": "dzk666123",
-          "team": "三带一队",
-          "gitcode_account": "马看到什么是人决定的",
+          "comment_id": "bf4b6e02ed14440f8d274bd43953e0bd",
+          "serial_number": 488,
+          "created_date": "2026-06-10T23:23:42+08:00",
+          "user_name": "wiooo_",
+          "team": "天1",
+          "gitcode_account": "wiooo_",
           "status": "报名",
-          "link": "https://gitcode.com/dzk666123/ops-math"
+          "link": "https://gitcode.com/wiooo_/ops-math"
         }
       ]
     },
