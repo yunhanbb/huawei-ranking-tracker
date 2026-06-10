@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-10T08:56:27+00:00",
+  "generated_at": "2026-06-10T12:31:05+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 436,
-  "application_comment_count": 107,
+  "comment_total": 438,
+  "application_comment_count": 109,
   "ignored_comment_count": 33,
   "tasks": [
     {
@@ -214,8 +214,8 @@
       "number": 4,
       "title": "Cast&EmbeddingDenseGrad 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/Cast&EmbeddingDenseGrad_task_doc.md",
-      "status": "锁定",
-      "assignees": "昇腾推理越极限团队、算子开发学习、副业创收",
+      "status": "开放",
+      "assignees": "昇腾推理越极限团队、算子开发学习",
       "bonus": "69651元",
       "deadline": "2026.07.30",
       "application_count": 4,
@@ -267,8 +267,8 @@
       "number": 5,
       "title": "DynamicMap容器算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/dynamicMap_task_doc.md",
-      "status": "锁定",
-      "assignees": "亩积吖、Dryoung、edconeone",
+      "status": "开放",
+      "assignees": "Dryoung、edconeone",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
       "application_count": 8,
@@ -364,7 +364,7 @@
       "assignees": "HIT-AI、boxw987、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 9,
+      "application_count": 10,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -455,6 +455,16 @@
           "gitcode_account": "mpmswj",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "dd727982115b47c1a2e5f3ed892fbdd8",
+          "serial_number": 486,
+          "created_date": "2026-06-10T17:27:26+08:00",
+          "user_name": "CyndiZ",
+          "team": "曼波",
+          "gitcode_account": "CyndiZ",
+          "status": "报名",
+          "link": "https://gitcode.com/CyndiZ/ops-math"
         }
       ]
     },
@@ -914,8 +924,8 @@
       "number": 14,
       "title": "UpsampleNearestExact1d&UpsampleNearestExact2d 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/UpsampleNearestExact1d&UpsampleNearestExact2d_task_doc.md",
-      "status": "锁定",
-      "assignees": "小大、HPC+AI、玩昇腾machine",
+      "status": "开放",
+      "assignees": "小大、HPC+AI",
       "bonus": "23380.5元",
       "deadline": "2026.06.30",
       "application_count": 3,
@@ -1123,11 +1133,11 @@
       "number": 17,
       "title": "InplaceRsqrt 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/InplaceRsqrt_task_doc.md",
-      "status": "锁定",
-      "assignees": "NoOne、马上有钱、野人部落2",
+      "status": "开放",
+      "assignees": "NoOne、马上有钱",
       "bonus": "17985元",
       "deadline": "2026.06.30",
-      "application_count": 3,
+      "application_count": 4,
       "applications": [
         {
           "comment_id": "04abc1fc65ea4e40b17862d90f09e59b",
@@ -1158,6 +1168,16 @@
           "gitcode_account": "m0_64162640",
           "status": "报名",
           "link": "https://gitcode.com/m0_64162640/ops-math"
+        },
+        {
+          "comment_id": "4d011318267845bbb013847d39c59142",
+          "serial_number": 487,
+          "created_date": "2026-06-10T19:28:08+08:00",
+          "user_name": "dzk666123",
+          "team": "三带一队",
+          "gitcode_account": "马看到什么是人决定的",
+          "status": "报名",
+          "link": "https://gitcode.com/dzk666123/ops-math"
         }
       ]
     },
