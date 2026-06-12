@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-12T13:33:49+00:00",
+  "generated_at": "2026-06-12T16:51:11+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 445,
-  "application_comment_count": 112,
+  "comment_total": 446,
+  "application_comment_count": 113,
   "ignored_comment_count": 37,
   "tasks": [
     {
@@ -613,7 +613,7 @@
       "assignees": "今天要吃三碗饭、ddplys、搞了再说",
       "bonus": "40384.5元",
       "deadline": "2026.06.30",
-      "application_count": 7,
+      "application_count": 8,
       "applications": [
         {
           "comment_id": "f3cd803d3a984012ac91ad25b13e2680",
@@ -684,6 +684,16 @@
           "gitcode_account": "mpmswj",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "1b8519edd5ea46ea8fb8344c3286c5b6",
+          "serial_number": 496,
+          "created_date": "2026-06-13T00:00:05+08:00",
+          "user_name": "jingkai-2026",
+          "team": "三寸人间",
+          "gitcode_account": "jingkai-2026",
+          "status": "报名",
+          "link": "https://gitcode.com/jingkai-2026/ops-math"
         }
       ]
     },
