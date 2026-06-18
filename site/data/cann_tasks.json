@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-18T06:02:27+00:00",
+  "generated_at": "2026-06-18T11:16:41+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 448,
-  "application_comment_count": 114,
+  "comment_total": 449,
+  "application_comment_count": 115,
   "ignored_comment_count": 38,
   "tasks": [
     {
@@ -1240,7 +1240,7 @@
       "assignees": "披荆斩棘、xy cheng、不知名队",
       "bonus": "17494.5元",
       "deadline": "2026.06.30",
-      "application_count": 5,
+      "application_count": 6,
       "applications": [
         {
           "comment_id": "bd0007f11486421c84c1180027de25d0",
@@ -1291,6 +1291,16 @@
           "gitcode_account": "fasdfaefsd",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "72073dfdc5264ec38eb1b96de145064b",
+          "serial_number": 499,
+          "created_date": "2026-06-18T15:05:22+08:00",
+          "user_name": "jingkai-2026",
+          "team": "三寸人间",
+          "gitcode_account": "jingkai-2026",
+          "status": "报名",
+          "link": "https://gitcode.com/jingkai-2026/ops-nn"
         }
       ]
     },
