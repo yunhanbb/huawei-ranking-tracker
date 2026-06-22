@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-22T05:10:06+00:00",
+  "generated_at": "2026-06-22T12:19:36+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 451,
-  "application_comment_count": 115,
+  "comment_total": 453,
+  "application_comment_count": 117,
   "ignored_comment_count": 40,
   "tasks": [
     {
@@ -19,7 +19,7 @@
       "assignees": "wzy-ikunvv、willooo、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 4,
+      "application_count": 5,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -60,6 +60,16 @@
           "gitcode_account": "dahfgakf",
           "status": "报名",
           "link": "https://gitcode.com/dahfgakf/ops-math"
+        },
+        {
+          "comment_id": "086071e95bc2408f8004d2e1a8a5ea3e",
+          "serial_number": 502,
+          "created_date": "2026-06-22T15:45:49+08:00",
+          "user_name": "lunhao2023",
+          "team": "再来试试",
+          "gitcode_account": "lunhao2023",
+          "status": "报名",
+          "link": "https://gitcode.com/lunhao2023/ops-solver"
         }
       ]
     },
@@ -394,7 +404,7 @@
       "assignees": "HIT-AI、boxw987、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.06.30",
-      "application_count": 9,
+      "application_count": 10,
       "applications": [
         {
           "comment_id": "cff592faba2d4a418cb6e94787c6dc01",
@@ -485,6 +495,16 @@
           "gitcode_account": "mpmswj",
           "status": "报名",
           "link": "https://gitcode.com/cann/ops-math"
+        },
+        {
+          "comment_id": "825d7f77d1e54b6295fb49b20a4b9085",
+          "serial_number": 503,
+          "created_date": "2026-06-22T15:46:10+08:00",
+          "user_name": "LiJianhao2",
+          "team": "看不到我",
+          "gitcode_account": "LiJianhao2",
+          "status": "报名",
+          "link": "https://gitcode.com/LiJianhao2/ops-math_5296"
         }
       ]
     },
