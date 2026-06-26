@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-26T09:41:33+00:00",
+  "generated_at": "2026-06-26T12:19:03+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务6月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 460,
-  "application_comment_count": 118,
+  "comment_total": 462,
+  "application_comment_count": 120,
   "ignored_comment_count": 46,
   "tasks": [
     {
@@ -72,14 +72,14 @@
           "link": "https://gitcode.com/lunhao2023/ops-solver"
         },
         {
-          "comment_id": "31b96c0c36a646309134140f24f77fe6",
-          "serial_number": 511,
-          "created_date": "2026-06-25T16:05:34+08:00",
-          "user_name": "Morikunn",
-          "team": "花开富贵",
-          "gitcode_account": "Morikunn",
+          "comment_id": "290b6cf858eb4db5b232421bc5988bd4",
+          "serial_number": 513,
+          "created_date": "2026-06-26T19:46:47+08:00",
+          "user_name": "ZAK1030",
+          "team": "勇往直前",
+          "gitcode_account": "ZAK1030",
           "status": "报名",
-          "link": "https://gitcode.com/Morikunn/ops-solver"
+          "link": "https://gitcode.com/ZAK1030/ops-solver"
         }
       ]
     },
@@ -1124,7 +1124,7 @@
       "assignees": "再来试试、yangb、大家太卷了我害怕",
       "bonus": "22399.5元",
       "deadline": "2026.06.30",
-      "application_count": 8,
+      "application_count": 10,
       "applications": [
         {
           "comment_id": "902ed7ea6cb34521a6f28ba46ff8915b",
@@ -1205,6 +1205,26 @@
           "gitcode_account": "yunhanbb",
           "status": "报名",
           "link": "https://gitcode.com/yunhanbb/ops-math"
+        },
+        {
+          "comment_id": "31b96c0c36a646309134140f24f77fe6",
+          "serial_number": 511,
+          "created_date": "2026-06-25T16:05:34+08:00",
+          "user_name": "Morikunn",
+          "team": "花开富贵",
+          "gitcode_account": "Morikunn",
+          "status": "报名",
+          "link": "https://gitcode.com/Morikunn/ops-math"
+        },
+        {
+          "comment_id": "19da9dcbd802427fa749a81dc792e520",
+          "serial_number": 512,
+          "created_date": "2026-06-26T18:20:37+08:00",
+          "user_name": "Morikunn",
+          "team": "花开富贵",
+          "gitcode_account": "Morikunn",
+          "status": "报名",
+          "link": "https://gitcode.com/Morikunn/ops-math"
         }
       ]
     },
