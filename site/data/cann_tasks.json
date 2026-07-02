@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T23:22:30+00:00",
+  "generated_at": "2026-07-02T04:07:57+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
@@ -317,7 +317,7 @@
       "number": 5,
       "title": "DynamicMap容器算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/dynamicMap_task_doc.md",
-      "status": "锁定",
+      "status": "关闭",
       "assignees": "Dryoung、edconeone、忆往昔",
       "bonus": "60985.5元",
       "deadline": "2026.06.30",
