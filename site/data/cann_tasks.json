@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-08T04:21:07+00:00",
+  "generated_at": "2026-07-08T07:36:07+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务7月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 486,
+  "comment_total": 490,
   "application_comment_count": 125,
-  "ignored_comment_count": 66,
+  "ignored_comment_count": 70,
   "tasks": [
     {
       "id": "20260529-1",
@@ -102,14 +102,14 @@
           "link": "https://gitcode.com/qq_49042098/ops-solver"
         },
         {
-          "comment_id": "0c6775b1e3b0494b84252dad227ed071",
-          "serial_number": 541,
-          "created_date": "2026-07-07T13:33:08+08:00",
-          "user_name": "Ivyalways",
-          "team": "Ivyalway",
-          "gitcode_account": "Ivyalways",
+          "comment_id": "51d146b0d416448da11733b544584152",
+          "serial_number": 546,
+          "created_date": "2026-07-08T13:33:33+08:00",
+          "user_name": "edconeone",
+          "team": "edconeone",
+          "gitcode_account": "edconeone",
           "status": "报名",
-          "link": "https://gitcode.com/Ivyalways/ops-solver"
+          "link": "https://gitcode.com/edconeone/ops-solver"
         }
       ]
     },
