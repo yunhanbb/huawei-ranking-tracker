@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-09T03:56:32+00:00",
+  "generated_at": "2026-07-09T07:51:16+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务7月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 494,
-  "application_comment_count": 127,
-  "ignored_comment_count": 72,
+  "comment_total": 500,
+  "application_comment_count": 129,
+  "ignored_comment_count": 76,
   "tasks": [
     {
       "id": "20260529-1",
@@ -19,7 +19,7 @@
       "assignees": "wzy-ikunvv、willooo、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 11,
+      "application_count": 13,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -130,6 +130,26 @@
           "gitcode_account": "dududu121",
           "status": "报名",
           "link": "https://gitcode.com/dududu121/cann-ops-competitions"
+        },
+        {
+          "comment_id": "9df9d73dca3a444eba365fb91f59a7f4",
+          "serial_number": 557,
+          "created_date": "2026-07-09T14:15:48+08:00",
+          "user_name": "Ivyalways",
+          "team": "Ivyalways",
+          "gitcode_account": "Ivyalways",
+          "status": "报名",
+          "link": "https://gitcode.com/Ivyalways/ops-solver"
+        },
+        {
+          "comment_id": "c295f42d81e74f0b9578891e6f50e5db",
+          "serial_number": 560,
+          "created_date": "2026-07-09T15:43:02+08:00",
+          "user_name": "xiao--hai",
+          "team": "DNN",
+          "gitcode_account": "xiao--hai",
+          "status": "报名",
+          "link": "https://gitcode.com/xiao--hai/ops-solver"
         }
       ]
     },
