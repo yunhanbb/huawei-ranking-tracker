@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "checked_at": "2026-06-07T16:22:45+00:00",
-      "name": "Huawei Algorithm Challenge 37",
-      "competition_url_id": "1300000256",
-      "team": "hid_rl3ei4awlp8cx6k",
-      "found": true,
-      "ranking": 12,
-      "score": 372593183,
-      "ranking_change": "unchange",
-      "ranking_change_num": 0,
-      "refresh_time": "2026-06-01 01:38:01"
-    },
-    {
       "checked_at": "2026-06-07T18:09:54+00:00",
       "name": "Huawei Algorithm Challenge 37",
       "competition_url_id": "1300000256",
@@ -3590,6 +3578,18 @@
     },
     {
       "checked_at": "2026-07-15T02:55:49+00:00",
+      "name": "Huawei Algorithm Challenge 37",
+      "competition_url_id": "1300000256",
+      "team": "hid_rl3ei4awlp8cx6k",
+      "found": true,
+      "ranking": 12,
+      "score": 372593183,
+      "ranking_change": "unchange",
+      "ranking_change_num": 0,
+      "refresh_time": "2026-06-01 01:38:01"
+    },
+    {
+      "checked_at": "2026-07-15T05:38:42+00:00",
       "name": "Huawei Algorithm Challenge 37",
       "competition_url_id": "1300000256",
       "team": "hid_rl3ei4awlp8cx6k",
