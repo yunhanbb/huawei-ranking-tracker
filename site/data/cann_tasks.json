@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-16T12:26:37+00:00",
+  "generated_at": "2026-07-16T15:09:56+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务7月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 604,
-  "application_comment_count": 135,
+  "comment_total": 606,
+  "application_comment_count": 136,
   "ignored_comment_count": 175,
   "tasks": [
     {
@@ -182,7 +182,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗、鱼",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 6,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -243,6 +243,16 @@
           "gitcode_account": "maggie_Ha",
           "status": "报名",
           "link": "https://gitcode.com/maggie_Ha/ops-blas"
+        },
+        {
+          "comment_id": "5c8c328490184307890fec4a1d76ac96",
+          "serial_number": 674,
+          "created_date": "2026-07-16T23:05:39+08:00",
+          "user_name": "DreamOfAnts",
+          "team": "从蓉应队",
+          "gitcode_account": "DreamOfAnts",
+          "status": "报名",
+          "link": "https://gitcode.com/DreamOfAnts/ops-blas"
         }
       ]
     },
@@ -717,7 +727,7 @@
       "title": "Im2col 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/im2col_task_doc.md",
       "status": "锁定",
-      "assignees": "跑刀的鼠鼠、keke、阳焰波澄",
+      "assignees": "耄耋、keke、阳焰波澄",
       "bonus": "50194.5元",
       "deadline": "2026.07.30",
       "application_count": 5,
