@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-16T23:04:43+00:00",
+  "generated_at": "2026-07-17T03:22:46+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【社区任务7月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 606,
-  "application_comment_count": 136,
-  "ignored_comment_count": 175,
+  "comment_total": 613,
+  "application_comment_count": 137,
+  "ignored_comment_count": 181,
   "tasks": [
     {
       "id": "20260529-1",
@@ -19,7 +19,7 @@
       "assignees": "wzy-ikunvv、DNN、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 15,
+      "application_count": 16,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -170,6 +170,16 @@
           "gitcode_account": "qq_34974224",
           "status": "报名",
           "link": "https://gitcode.com/qq_34974224/ops-solver"
+        },
+        {
+          "comment_id": "74a15f101e354d77bc9f2d2579a42c86",
+          "serial_number": 681,
+          "created_date": "2026-07-17T11:18:51+08:00",
+          "user_name": "ddplys",
+          "team": "ddplys",
+          "gitcode_account": "ddplys",
+          "status": "报名",
+          "link": "https://gitcode.com/ddplys/ops-solver"
         }
       ]
     },
