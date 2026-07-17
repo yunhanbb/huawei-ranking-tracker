@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T11:27:10+00:00",
+  "generated_at": "2026-07-17T13:54:37+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
@@ -8,7 +8,7 @@
   "task_count": 20,
   "comment_total": 622,
   "application_comment_count": 141,
-  "ignored_comment_count": 186,
+  "ignored_comment_count": 187,
   "tasks": [
     {
       "id": "20260529-1",
@@ -551,7 +551,7 @@
       "title": "MinDim&MaxDim 算子开发",
       "link": "https://gitcode.com/cann/cann-ops-competitions/blob/master/04_tasks/01_community-task-2026/docs/202605/MinDim&MaxDim_task_doc.md",
       "status": "锁定",
-      "assignees": "HIT-AI、勇往直前、夏日幽灵",
+      "assignees": "edconeone、勇往直前、夏日幽灵",
       "bonus": "58860元",
       "deadline": "2026.07.30",
       "application_count": 13,
