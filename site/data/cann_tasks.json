@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-05T12:05:50+00:00",
+  "generated_at": "2026-08-05T15:22:03+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【CANN社区任务8月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 908,
-  "application_comment_count": 141,
-  "ignored_comment_count": 473,
+  "comment_total": 914,
+  "application_comment_count": 144,
+  "ignored_comment_count": 476,
   "tasks": [
     {
       "id": "20260529-1",
@@ -19,7 +19,7 @@
       "assignees": "wzy-ikunvv、DNN、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 17,
+      "application_count": 18,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -190,6 +190,16 @@
           "gitcode_account": "Ethan-ki",
           "status": "报名",
           "link": "https://gitcode.com/Ethan-ki/ops-math"
+        },
+        {
+          "comment_id": "0aea80601b1d4362b2fb8647bfec9ec0",
+          "serial_number": 988,
+          "created_date": "2026-08-05T23:04:43+08:00",
+          "user_name": "slamkuntech",
+          "team": "湘岚菌",
+          "gitcode_account": "slamkunTech",
+          "status": "报名成功写了设计文档更新进度提交了pr,开发中",
+          "link": "https://gitcode.com/slamkunTech/ops-nn"
         }
       ]
     },
@@ -202,7 +212,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗、鱼",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 7,
+      "application_count": 8,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -273,6 +283,16 @@
           "gitcode_account": "DreamOfAnts",
           "status": "报名",
           "link": "https://gitcode.com/DreamOfAnts/ops-blas"
+        },
+        {
+          "comment_id": "d580ece696b54ccfa32ac70ccc7b08e3",
+          "serial_number": 986,
+          "created_date": "2026-08-05T22:40:03+08:00",
+          "user_name": "Tridu",
+          "team": "tridu",
+          "gitcode_account": "Tridu",
+          "status": "报名成功写了设计文档更新进度提交了pr,开发中",
+          "link": "https://gitcode.com/Tridu/ops-nn"
         }
       ]
     },
@@ -368,7 +388,7 @@
       "assignees": "昇腾推理越极限团队、算子开发学习、qq_34974224",
       "bonus": "69651元",
       "deadline": "2026.07.30",
-      "application_count": 6,
+      "application_count": 7,
       "applications": [
         {
           "comment_id": "504a6bedc50c4c51add5d555a5a12111",
@@ -429,6 +449,16 @@
           "gitcode_account": "qq_34974224",
           "status": "报名",
           "link": "https://gitcode.com/qq_34974224/ops-math"
+        },
+        {
+          "comment_id": "663843ac781b48d1806ab790284db205",
+          "serial_number": 985,
+          "created_date": "2026-08-05T22:04:30+08:00",
+          "user_name": "yueyeying",
+          "team": "越野樱",
+          "gitcode_account": "yueyeying",
+          "status": "报名成功写了设计文档更新进度提交了pr,开发中",
+          "link": "https://gitcode.com/yueyeying/ops-nn"
         }
       ]
     },
