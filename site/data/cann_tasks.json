@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T11:37:55+00:00",
+  "generated_at": "2026-08-09T13:05:58+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
@@ -7,7 +7,7 @@
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
   "comment_total": 934,
-  "application_comment_count": 144,
+  "application_comment_count": 147,
   "ignored_comment_count": 496,
   "tasks": [
     {
@@ -19,7 +19,7 @@
       "assignees": "wzy-ikunvv、DNN、桶桶罐罐",
       "bonus": "90415.5元",
       "deadline": "2026.07.30",
-      "application_count": 18,
+      "application_count": 19,
       "applications": [
         {
           "comment_id": "cf993a7188a54917ad9b48beb2e2d1fa",
@@ -200,6 +200,16 @@
           "gitcode_account": "slamkunTech",
           "status": "报名成功写了设计文档更新进度提交了pr,开发中",
           "link": "https://gitcode.com/slamkunTech/ops-nn"
+        },
+        {
+          "comment_id": "d1f20590279f4dd5aff5c856d41468ef",
+          "serial_number": 1009,
+          "created_date": "2026-08-09T21:03:48+08:00",
+          "user_name": "slamkuntech",
+          "team": "湘岚菌",
+          "gitcode_account": "slamkunTech",
+          "status": "报名成功写了设计文档更新进度提交了pr,CLA已经签署，开发中，已经在910B4开发完成并验证并提交进度更新",
+          "link": "https://gitcode.com/slamkuntech/ops-gnn"
         }
       ]
     },
@@ -212,7 +222,7 @@
       "assignees": "肖肖元元宝宝、菜菜狗、鱼",
       "bonus": "82240.5元",
       "deadline": "2026.07.30",
-      "application_count": 8,
+      "application_count": 9,
       "applications": [
         {
           "comment_id": "6759dae30c424ceda0e2aff9ca9fcf68",
@@ -292,6 +302,16 @@
           "team": "tridu",
           "gitcode_account": "Tridu",
           "status": "报名成功写了设计文档更新进度提交了pr,开发中",
+          "link": "https://gitcode.com/Tridu/ops-nn"
+        },
+        {
+          "comment_id": "3fd09d4b7c7b46ac81f1abe91fedf812",
+          "serial_number": 1011,
+          "created_date": "2026-08-09T21:05:06+08:00",
+          "user_name": "Tridu",
+          "team": "tridu",
+          "gitcode_account": "Tridu",
+          "status": "报名成功写了设计文档更新进度提交了pr,910B4开发完成并验证并提交进度更新",
           "link": "https://gitcode.com/Tridu/ops-nn"
         }
       ]
@@ -388,7 +408,7 @@
       "assignees": "昇腾推理越极限团队、算子开发学习、qq_34974224",
       "bonus": "69651元",
       "deadline": "2026.07.30",
-      "application_count": 7,
+      "application_count": 8,
       "applications": [
         {
           "comment_id": "504a6bedc50c4c51add5d555a5a12111",
@@ -459,6 +479,16 @@
           "gitcode_account": "yueyeying",
           "status": "报名成功写了设计文档更新进度提交了pr,开发中",
           "link": "https://gitcode.com/yueyeying/ops-nn"
+        },
+        {
+          "comment_id": "ff38eb10561340cdae6905b88dfb9599",
+          "serial_number": 1010,
+          "created_date": "2026-08-09T21:04:33+08:00",
+          "user_name": "yueyeying",
+          "team": "越野樱",
+          "gitcode_account": "yueyeying",
+          "status": "报名成功写了设计文档更新进度提交了pr,910B4开发完成并验证并提交进度更新",
+          "link": "https://gitcode.com/yueyeying/ops-gnn"
         }
       ]
     },
