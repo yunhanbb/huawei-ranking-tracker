@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-20T11:34:37+00:00",
+  "generated_at": "2026-08-20T13:02:54+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
   "discussion_title": "【CANN社区任务8月上新】社区任务全新上线，参与即可赢取现金激励！",
   "start_date": "2026-05-29T00:00:00+08:00",
   "task_count": 20,
-  "comment_total": 973,
+  "comment_total": 974,
   "application_comment_count": 147,
-  "ignored_comment_count": 534,
+  "ignored_comment_count": 535,
   "tasks": [
     {
       "id": "20260529-1",
@@ -660,9 +660,9 @@
           "comment_id": "d449d438860947a9aa512d0e2ef8c505",
           "serial_number": 433,
           "created_date": "2026-06-04T13:51:48+08:00",
-          "user_name": "sunshine00.del.1780833209295",
+          "user_name": null,
           "team": "这波运气不好",
-          "gitcode_account": "sunshine00.del.1780833209295",
+          "gitcode_account": null,
           "status": "报名",
           "link": "https://gitcode.com/sunshine00/cann-ops-competitions"
         },
