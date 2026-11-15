@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T09:05:16+00:00",
+  "generated_at": "2026-11-15T16:56:21+00:00",
   "source": "https://gitcode.com/org/cann/discussions/22",
   "source_id": "5162848",
   "discussion_id": "bd1df82e94bc42d3a9bcff9876253ae3",
@@ -1191,7 +1191,7 @@
           "comment_id": "08ed45d6b4854ee190dcb3b5b9ccb81c",
           "serial_number": 340,
           "created_date": "2026-05-30T13:15:11+08:00",
-          "user_name": "linux12",
+          "user_name": null,
           "team": "linux012",
           "gitcode_account": "linux12",
           "status": "报名",
